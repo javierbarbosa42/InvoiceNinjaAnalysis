@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reports</title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--Icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
+        <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <!--NavBar-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <div id="mySidenav" class="sidenav">
+                            <button class="closeButton" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+                            <h2>Invoice Ninja</h2>
+                            <hr id="navBarLine">
+                            <a href="invoice_ninja.html">Resumen</a>
+                            <a href="features.html">Features</a>
+                            <a href="categorias.html">UI</a>
+                            <a href="categorias.html">UX</a>
+                            <a href="contact.html">Conectividad Eventual</a>
+                            <a href="freealternatives.html">Free alternatives</a>
+                            <a href="paidalternatives.html">Paid alternatives</a>
+                            <a href="Mercado.html">Mercado</a>
+                        </div>
+                        <span id="optionsButton" class="pull-left" onclick="openNav()"><i class="fas fa-bars"></i></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a id="logo" href="home.html" class="pull-right"><img src="https://avatars1.githubusercontent.com/u/15712270?s=200&v=4" height="50" width="50" alt="Invoice_ninja logo"></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Page Content-->
+        <div class="container-fluid">
+            <!--Catalogue1----------------------------------->
+            <div class="row justify-content-md-center align-items-center catalogueRow">
+                <div class="col-sm-6">
+                    <h1>Reports</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="w-100 divider"></div>
+                    <div class="col">
+
+                        <p>It’s easy to get caught up in the job you are currently working on, sending invoices and chasing payments. But it’s just as important to take a step back from time to time, and to look at the bigger picture of how your freelance business is doing.</p>
+                        <p>The Reports function helps you do just that. You can define your parameters and extract the exact information you need to generate a range of reports.</p>
+                        <br>
+
+                        <h3>Report Setting</h3>
+                        <p>The Report Settings section enables you to set parameters and filter the data to generate the right report for you.</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Type</strong>: Click on the drop-down menu and choose the type of report you want to create. There’s a wide range of report types to choose from, such as Invoice, Payment, Client, Quote, Expense, Profit and Loss, and more.</li>
+                            <li><strong>Date Range</strong>: Click on the drop-down menu and choose the desired date range of your report. There are a number of pre-defined ranges to choose from, such as Last 7 Days, Last Month, Last Year and This Year. Or you can select a custom date range with the Start and End calendars. Click Apply to implement the custom range.</li>
+                            <li><strong>Group Sort</strong>: You can sort the report results according to various parameters. Click the drop-down menu to select a sort function from the options available for the chosen report type.</li>
+                        </ul>
+                        <ul id="parragraphContent">
+                            <li><strong>Run</strong>: Once you’ve selected all the parameters, click the green Run&gt; button. The extracted data will show in the report display section below.  TIP: When you click Run&gt;, the report will generate automatically, and includes only the relevant columns and data, based on the type of reports and dates selected. To view another report, simply change your selections and click Run&gt;.</li>
+                            <li><strong>Export</strong>: To export the report data, click the gray Export button. The report will automatically download as a .csv file. If you want to export the data as an Excel, PDF or Zip file, click the drop-down menu at the left of the Export button and choose the desired file type. Then click Export. The file will download in the format you selected.</li>
+                            <li><strong>Schedule</strong>: Don’t have the time or mindspace to remember to download reports? You don’t have to! With the Schedule feature, you can pre-select reports to be automatically generated at a frequency of your choosing, and sent to the email address linked to your Invoice Ninja account.</li>
+                        </ul>
+                        <p>To schedule receiving the defined report, click the blue Schedule button.</p>
+                        <p>In the pop-up box, select the Frequency you’d like to receive the report. Options include Daily, Weekly, Biweekly or Monthly. Then select the Start Date from when you want to begin receiving the report.</p>
+                        <p>After the report has been scheduled, you’ll see a gray Cancel Schedule button on your Reports page. You can cancel the scheduled report at any time by clicking on the cancel button.</p>
+                        <br>
+
+                        <h3>Calendar</h3>
+                        <p>Want a calendar style visualization of your Invoice Ninja activity? Click the gray Calendar button that appears at the top right of the Reports page. You can view details of Invoices, Payments, Quotes, Projects, Tasks and Expenses on the dates they occurred on the calendar.</p>
+                        <p>The calendar will include details of all transactions by default. To filter the calendar so it only displays some of your invoicing data, click inside the Filter field at the top right of the page. Select your desired filters from the drop-down menu.</p>
+                        <p>The calendar is customizable so you can create your preferred view. At the top right of the calendar, there are 4 periodic views tabs to choose from: Month, Week, Day or List. Click the preferred tab and the view will change automatically.</p>
+                        <p>Select today’s date by clicking the Today tab at the top left of the calendar. Or click the left or right arrows to move between time periods.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Screen8----------------------------------------------->
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col contactPage blackPage">
+                <h2 id="infoTitle">Invoice Ninja</h2>
+            </div>
+        </div>
+        <!--JQuery and JavaScript-->
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <!--NavBar JS-->
+        <script type="text/javascript" src="JS/navBar.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

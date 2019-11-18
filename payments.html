@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payments</title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--Icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
+        <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <!--NavBar-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <div id="mySidenav" class="sidenav">
+                            <button class="closeButton" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+                            <h2>Invoice Ninja</h2>
+                            <hr id="navBarLine">
+                            <a href="invoice_ninja.html">Resumen</a>
+                            <a href="features.html">Features</a>
+                            <a href="categorias.html">UI</a>
+                            <a href="categorias.html">UX</a>
+                            <a href="contact.html">Conectividad Eventual</a>
+                            <a href="freealternatives.html">Free alternatives</a>
+                            <a href="paidalternatives.html">Paid alternatives</a>
+                            <a href="Mercado.html">Mercado</a>
+                        </div>
+                        <span id="optionsButton" class="pull-left" onclick="openNav()"><i class="fas fa-bars"></i></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a id="logo" href="home.html" class="pull-right"><img src="https://avatars1.githubusercontent.com/u/15712270?s=200&v=4" height="50" width="50" alt="Invoice_ninja logo"></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Page Content-->
+        <div class="container-fluid">
+            <!--Catalogue1----------------------------------->
+            <div class="row justify-content-md-center align-items-center catalogueRow">
+                <div class="col-sm-6">
+                    <h1>Payments</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="w-100 divider"></div>
+                    <div class="col">
+
+
+
+                        <p>The Invoice Ninja system handles your entire invoicing process – from sending a quote (Pro Plan only), to invoicing your client, to receiving payment. What’s more, you can receive payments directly and automatically via Invoice Ninja’s 45+ payment partners, enabling totally smooth management of your customer accounts using your choice of payment provider. To learn more about Invoice Ninja’s payment partners, <a class="reference external" href="https://www.invoiceninja.com/partners">click here</a>.</p>
+                        <br>
+                        <h3>List Payments</h3>
+                        <p>In the meantime, we’re going to take you through the Payments list page to give you an idea of the complete payment picture.</p>
+                        <p>To view the Payments list page, click on the Payments tab on the main sidebar. This will open the Payments list page.</p>
+                        <p>Understanding the Payments List Page</p>
+                        <h3>Overview</h3>
+                        <br>
+                        <p>The Payments list page displays a summary of all payments once they have been received. Payments are recorded in two ways:</p>
+                        <ol id="parragraphContent">
+                            <li><strong>Automatic payment</strong>: If your client has paid you via any of Invoice Ninja’s 45+ payment partners, the payment will be automatically recorded in the Payments list. You will be notified by Invoice Ninja on your Dashboard page in the Payments table, and also via email (if you have chosen the relevant notification setting on the Settings / Notifications page).</li>
+                            <li><strong>Manual payment</strong>: If your client has paid you via cash, check, bank transfer, credit card or any other payment system not linked to Invoice Ninja, you will need to enter the payment manually on the Payments / Create page.</li>
+                        </ol>
+                        <p>Whether automatic or manual entry, the Payments list page presents an overview of all payments received in a user-friendly table format. Now, we’ll take you through the various columns in the Payments table from left to right:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Invoice</strong>: The invoice number for the payment</li>
+                            <li><strong>Client Name</strong>: The client’s name</li>
+                            <li><strong>Transaction Reference</strong>: If you have been paid automatically via one of the payment partners, the payment reference number generated by the payment system will be automatically recorded here. If you have entered a manual payment, the Transaction Reference will display the information you entered in the Transaction Reference field when entering the payment. If you left the Transaction Reference field blank when entering the payment, the system will automatically display “Manual entry” as the Transaction Reference on the Payments list.</li>
+                            <li><strong>Method</strong>: The method of payment used, ie. PayPal, Bank Transfer, Visa, etc</li>
+                            <li><strong>Source</strong>: Additional information displayed for online payments</li>
+                            <li><strong>Amount</strong>: The payment amount that was received</li>
+                            <li><strong>Date</strong>: The date the payment was received</li>
+                            <li><strong>Status</strong>: The payment status (ie. Overdue, Partial Completed, etc)</li>
+                        </ul>
+                        <p>The final column to the right is the Action column. To view the actions, hover your mouse over the Action area of the relevant payment entry and a gray Select button will appear. Click on the arrow at the right side of the button to open a drop-down list. These are the action options:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Edit Payment</strong>: Edit the payment information on the Edit Payment page.</li>
+                            <li><strong>Email Payment:</strong> Send the payment receipt to the client by email.</li>
+                            <li><strong>Refund Payment:</strong> Refund the payment (or part of the payment) to the client.</li>
+                            <li><strong>Archive Payment</strong>: Click here to archive the payment. It will be archived and removed from the Payments list page.</li>
+                            <li><strong>Delete Payment</strong>: Click here to delete the payment. It will be archived and removed from the Payments list page.</li>
+                        </ul>
+                        <p>Refunding a Payment</p>
+                        <p>If you need to refund a payment, or part of a payment, go to the relevant payment in the Payments list, click on the Action column at the far right, and choose Refund Payment from the drop down menu. The Refund Payment dialog box will open. Enter the amount you wish to refund, and click Refund. If you want to send an email notifying the client of the refund, make sure to check ‘Send email to client’.</p>
+                        <br>
+
+                        <h3>Archiving/Deleting</h3>
+                        <p>To archive or delete a payment, hover over the payment entry row, and open the Action drop-down list. Select Archive Payment or Delete Payment from the list. The Payments table will automatically refresh, and archived or deleted payments will no longer appear in the list.</p>
+                        <p>You can also archive or delete one or more payment via the gray Archive button that appears at the top left side of the Payments list page. To archive or delete payments, check the relevant payments in the check boxes that appear in the far left column next to the invoice number. The number of payments selected for archiving/deleting will automatically update and show on the Archive button. Then click on the Archive button, open the drop-down list and select the desired action.</p>
+                        <p>Want to view archived or deleted payments? Click on heck tthe field to the right of the gray Archive button at the top left of the page. Select the ‘Archived’ or ‘Deleted’ filter from the drop down menu. The table will automatically refresh, and will now feature the payments according to the filters you selected. full list of payments, including current, archived and deleted payments. The status of the archived and deleted payments will be displayed in the far right column.</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Deleted payments</strong> are displayed with a red Deleted button. To restore deleted payments, hover on the red Deleted button. A gray Select button will appear. Click on the Select arrow, and select Restore payment in the drop-down list.</li>
+                            <li><strong>Archived payments</strong> are displayed with an orange Archived button. To restore the archived payment, hover on the orange Archived button. A gray Select button will appear. Click on the Select arrow, and choose Restore payment from the drop-down list. To delete an archived payment, select Delete payment from the drop-down list of the Select button.</li>
+                        </ul>
+                        <br>
+
+                        <h3>Filter</h3>
+                        <p>To filter the Payments list, enter the filter data in the Filter field, situated at the top right of the page, to the left of the blue Enter Payment + button. Payments can be filtered according to Client name. Enter the name or parts of the name, and the filter function will automatically locate and present the relevant entries.</p>
+                        <p>You can enter a new payment directly from the Payments list page by clicking on the blue Enter Payment + button located at the top right side of the page. The Payments / Create page will open.</p>
+                        <br>
+
+                        <h3>Filter</h3>
+                        <p>To filter the Payments list, enter the filter data in the Filter field, situated at the top right of the page, to the left of the blue Enter Payment + button. Payments can be filtered according to Client name. Enter the name or parts of the name, and the filter function will automatically locate and present the relevant entries.</p>
+                        <br>
+
+                        <h3>Enter Payment</h3>
+                        <p>Once you’ve received payment, you’ll need to enter the payment toon the Invoice Ninja system. If your client paid via one of Invoice Ninja’s 45+ payment partners, the system will automatically record the payment and send a downloadable PDF receipt to the client’s email address. If you were paid via cash, check, bank transfer, credit card, credit or any other payment method not automatically linked to the Invoice Ninja system, you will be required to manually enter the payment. The procedure of entering a payment manually is simple and lightning fast. Now, we’ll take you through the payment entry process, step by step.</p>
+                        <p><strong>Let’s Begin</strong></p>
+                        <p>You can enter a new payment directly from the Payments list page by clicking on the blue Enter Payment + button located at the top right side of the page. The Payments / Create page will open.</p>
+                        <br>
+
+                        <h3>Manually Creating a New Payment</h3>
+                        <p>The Payments / Create page features a number of fields that you’ll need to complete.</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Client</strong>: Click on the arrow on the right side of the Client field and select the client from the drop-down list.</li>
+                            <li><strong>Invoice</strong>: Enter the invoice corresponding to the received payment. Click on the arrow on the right side of the Invoice field and select the invoice number from the drop-down list.</li>
+                            <li><strong>Amount</strong>: The invoice amount will appear automatically by default. However, if the payment amount does not correspond to the default invoice amount, you can manually Eenter the amount of payment received.</li>
+                            <li><strong>Payment Type</strong>: Select the payment method that was used. Click on the arrow on the right side of the Payment Type field, and a drop-down list featuring a range of payment methods will open. Select the appropriate method from the list. Options include Bank Transfer, Cash, Debit, all credit cards, Google Wallet, PayPal, check and more.</li>
+                            <li><strong>Payment Date</strong>: The date the payment was received. Click on the calendar icon to the right side of the Payment Date field and select the appropriate date.</li>
+                            <li><strong>Transaction Reference</strong>: Enter any information you wish for your future reference. This information can be useful when managing your accounts.</li>
+                            <li><strong>Private Notes</strong>: Here, you can add any comments, notes or reminders. These are for your eyes only – the client cannot see them.</li>
+                        </ul>
+                        <br>
+
+                        <h3>Email payment receipt</h3>
+                        <p>If you wish to send a receipt to your client for the payment received, check the ‘“Email payment receipt to the client’ box. A downloadable PDF receipt will be generated and automatically sent to the client’s email address when you save the payment entry.</p>
+                        <br>
+
+                        <h3>Saving the Payment</h3>
+                        <p>Once you’ve completed all the payment details, click Save and the payment will be saved to the Payments list. To cancel the payment entry, click Cancel.</p>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Screen8----------------------------------------------->
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col contactPage blackPage">
+                <h2 id="infoTitle">Invoice Ninja</h2>
+            </div>
+        </div>
+        <!--JQuery and JavaScript-->
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <!--NavBar JS-->
+        <script type="text/javascript" src="JS/navBar.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

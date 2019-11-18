@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoices</title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--Icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
+        <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <!--NavBar-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <div id="mySidenav" class="sidenav">
+                            <button class="closeButton" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+                            <h2>Invoice Ninja</h2>
+                            <hr id="navBarLine">
+                            <a href="invoice_ninja.html">Resumen</a>
+                            <a href="features.html">Features</a>
+                            <a href="categorias.html">UI</a>
+                            <a href="categorias.html">UX</a>
+                            <a href="contact.html">Conectividad Eventual</a>
+                            <a href="freealternatives.html">Free alternatives</a>
+                            <a href="paidalternatives.html">Paid alternatives</a>
+                            <a href="Mercado.html">Mercado</a>
+                        </div>
+                        <span id="optionsButton" class="pull-left" onclick="openNav()"><i class="fas fa-bars"></i></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a id="logo" href="home.html" class="pull-right"><img src="https://avatars1.githubusercontent.com/u/15712270?s=200&v=4" height="50" width="50" alt="Invoice_ninja logo"></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Page Content-->
+        <div class="container-fluid">
+            <!--Catalogue1----------------------------------->
+            <div class="row justify-content-md-center align-items-center catalogueRow">
+                <div class="col-sm-6">
+                    <h1>Invoices</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="w-100 divider"></div>
+                    <div class="col">
+
+
+                        <p>Well, it’s time to bill, and the Invoices function of Invoice Ninja lets you get the job done fast and with perfect accuracy.</p>
+                        <p>With a bustling freelance business, you’re going to be sending out a lot of invoices. Creating an invoice is simple with the New Invoice page. Once you’ve entered the client, job and rates information, you’ll see a live PDF preview of your invoice, and you’ll have a range of actions at your fingertips – from saving a draft, to sending the invoice to the client via email, to printing a PDF hard copy.</p>
+
+                        <h3>Invoices List page</h3>
+                        <p>With numerous invoices to keep track of, the Invoices list page is your go-to guide for the entire history and status of all your invoices – including those that have been paid, those sent but unpaid, and those still in the drafting and editing stage.</p>
+                        <br>
+
+                        <h3>Overview</h3>
+                        <p>The life of an invoice in the Invoice Ninja system is made up of a number of stages:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Draft</strong>: When you’ve created an invoice, but have not yet sent it. You may still need to edit.</li>
+                            <li><strong>Sent</strong>: You’ve sent the invoice, but the client has not yet paid.</li>
+                            <li><strong>Viewed</strong>: The client has opened the invoice email and viewed the invoice.</li>
+                            <li><strong>Partial</strong>: The invoice has been partially paid.</li>
+                            <li><strong>Paid</strong>: Congratulations! The client has paid the full invoice amount.</li>
+                            <li><strong>Unpaid</strong>: The invoice remains unpaid.</li>
+                            <li><strong>Overdue</strong>: The invoice has passed its due date.</li>
+                        </ul>
+                        <p>In order to understand exactly how the Invoices list page works, we’ll take you through it step by step.</p>
+                        <p>To view your Invoices list page, click the Invoices tab on the main sidebar. This will open the Invoices list page.</p>
+                        <p>The Invoices list page displays a table of all your active invoices, at every stage, from the moment you create a new invoice, to the moment you archive or delete an invoice.</p>
+                        <p>Let’s explore the invoices list according to the tabs on the main header bar of the table from left to right:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Invoice #</strong>: The number of the invoice</li>
+                            <li><strong>Client Name</strong>: The name of the client</li>
+                            <li><strong>Date</strong>: The date the invoice was issued</li>
+                            <li><strong>Amount</strong>: The total amount of the invoice</li>
+                            <li><strong>Balance</strong>: The amount owed by the client (after credits and other adjustments are calculated)</li>
+                            <li><strong>Due Date</strong>: The date the payment is due</li>
+                            <li><strong>Status</strong>: The current status of the invoice (Draft, Sent,  Viewed, Partial, Paid, Unpaid, Overdue)</li>
+                            <li><strong>Action</strong>: The Action button provides a range of possible actions, depending upon the status of the invoice.</li>
+                        </ul>
+                        <p>To view the actions, hover your mouse over the Action area of the relevant invoice entry and a gray Select button will appear. Click on the arrow at the right side of the button to open a drop-down list. For invoices with “Draft” status, the drop-down list presents the following action items:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Edit Invoice</strong>: Edit the invoice information on the Edit Invoice page.</li>
+                            <li><strong>Clone Invoice</strong>: Duplicate the invoice. Then you can make minor adjustments. This is a fast way to create a new invoice that is identical or similar to this invoice.</li>
+                            <li><strong>View History</strong>: You’ll be redirected to the Invoices / History page, where you can view a history of all the actions taken from the time the invoice was created. The Invoices / History page displays a copy of the latest version of the invoice and a drop-down list of all actions and the corresponding version of the invoice. Select the version you wish to view. Click on the blue Edit Invoice button at the top right of the page to edit the invoice.</li>
+                            <li><strong>Mark Sent</strong>: When you mark an invoice as sent, only then is the invoice viewable to the client in the client portal, and the client balance is updated to reflect the invoice amount.</li>
+                            <li><strong>Mark Paid</strong>: Manually mark the invoice as paid. You may want to do this if you are not entering the payment directly into the system.</li>
+                            <li><strong>Enter Payment</strong>: Enter the payment relevant to this invoice. You’ll be redirected to the Payments / Create page.</li>
+                            <li><strong>Archive Invoice</strong>: Click here to archive the invoice. It will be archived and removed from the Invoices list page.</li>
+                            <li><strong>Delete Invoice</strong>: Click here to delete the invoice. It will be deleted and removed from the Invoices list page.</li>
+                        </ul>
+
+
+
+
+
+                        <h3>Filtering Invoices</h3>
+                        <p>You can easily filter your invoices list according to any state or status - Archived, Deleted, Draft, Viewed, Partial, Paid, Unpaid, Overdue. Go to the Filter field, located at the top left of the Invoices list page. Click inside the field. A drop down menu will open, displaying all the filter options. Click on the filter option or multiple options you want. The list will refresh automatically to display your chosen filters.</p>
+                        <br>
+
+                        <h3>Bulk Actions</h3>
+                        <p>If you need to perform an action for a number of invoices, you can do it in one click with the bulk action feature. To use the bulk action feature, mark the relevant invoices in their checkbox at the far left of the invoices list. Once you’ve marked the invoices, click on the arrow of the gray Archive button, which is located at the top left of the invoices list. A drop down menu will open, featuring the following options:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Download Invoice</strong>: Download PDF versions of the marked invoices.</li>
+                            <li><strong>Email Invoice</strong>: Send invoices by email to the client(s).</li>
+                            <li><strong>Mark Sent</strong>: Mark invoices as sent. Only then are these invoices viewable to the client in the client portal, and the client’s total balance updated with the amounts of these invoices.</li>
+                            <li><strong>Mark Paid</strong>: Mark invoices as paid.</li>
+                            <li><strong>Archive Invoice</strong>: Archive invoices.</li>
+                            <li><strong>Delete Invoice</strong>: Delete invoices.</li>
+                        </ul>
+                        <p>Select the relevant option. The action will be taken automatically and instantly for all the invoices you checked.</p>
+
+
+
+                        <h3>Create Invoice</h3>
+                        <p>Here, we’re going to focus on how to create a new invoice.</p>
+                        <p><strong>Let’s Begin</strong></p>
+                        <p>To create a new invoice, go to the Invoices tab on the main sidebar, and click on the + sign. This will open the Invoices / Create page.</p>
+                        <p>When you open the Invoices / Create page, the Invoice Ninja system will automatically create a new, empty invoice for you to complete. Note that each new invoice you create will be automatically numbered in chronological order. This will ensure your records are kept logical and organized. (You have the option to change the invoice number manually. We’ll discuss that a little later.)</p>
+                        <p>The top section of the invoice contains a range of important information specific to the client and the work you are invoicing. Let’s explore them one by one:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Client</strong>: Click on the arrow at the right end of the Client field. Select the relevant client from the client list. TIP: You can create a new client while creating a new invoice. Simply click on the Create new client link, situated below the Client field on the Invoices / Create page. A pop-up window will open, enabling you to complete the new client’s details. Then continue creating the invoice for this new client.</li>
+                            <li><strong>Invoice Date</strong>: The date of creation of the invoice. Click the calendar icon to select the relevant date.</li>
+                            <li><strong>Due Date</strong>: The date the invoice payment is due. Click the calendar icon to select the relevant date.</li>
+                            <li><strong>Partial/Deposit</strong>: In the event that you need to bill the client for a partial amount of the total amount due, enter the amount in the Partial/Deposit field. This will be automatically applied to the invoice.</li>
+                            <li><strong>Invoice #</strong>: The invoice number is assigned automatically when you create a new invoice, in order of chronology. TIP: You can manually override the default invoice number by entering a different number in the Invoice # field.</li>
+                            <li><strong>PO #</strong>: The purchase order number. Enter the purchase order number for easy reference.</li>
+                            <li><strong>Discount</strong>: If you wish to apply a discount to the invoice, you can choose one of two methods: a monetary amount, or a percentage of the total amount due. To choose a method, click on the arrow at the right side of the box next to the Discount field. Select Percent or Amount from the drop-down list. Then enter the relevant figure. For example, to apply a 20% discount, enter the number 20, and select “Percent” from the drop-down list. To apply a $50 discount, enter the number 50, and select “Amount” from the drop-down list.</li>
+                        </ul>
+                        <p>Now that we’ve completed the general invoice information, it’s time to finish creating your invoice by specifying the job/s you’re billing for, the amounts due for each job/line item, taxes, discounts and final balance due. Let’s explore the various columns of the invoice, from left to right along the header bar:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Item</strong>: This is the name of the item you are billing for. You can either enter the details manually, or by selecting one of the set items created by you in the Product Library. To select an item from your product library, click on the arrow at the right side of the item bar and choose the relevant item from the drop-down list. To enter the item manually, click inside the field and enter the item. Here are some examples of an item: 1 hour programming services OR 5 pages translation OR 1 hour consulting.</li>
+                            <li><strong>Description</strong>: Add more information about the item. This will help the customer better understand the job completed, and is also useful for your own reference.</li>
+                            <li><strong>Unit Cost</strong>: The amount you charge per unit of items. For example, let’s say your item is “1 hour consulting”, and you charge $80 for an hour of consulting – that is, for 1 item unit. Then you’ll enter 80 in the Unit Cost field.</li>
+                        </ul>
+
+                        <ul id="parragraphContent">
+                            <li><strong>Quantity</strong>: The number of units being charged. Continuing the above example, let’s say you need to charge for 3 hours of consulting, enter the number 3 in the Quantity field.</li>
+                            <li><strong>Tax</strong>: Note: This field will only appear if you selected “Enable specifying line item taxes” in the Settings &gt; Tax Rates section of your account. To apply tax to the line item, click on the arrow at the right side of the Tax field and select the relevant tax from the drop-down list.</li>
+                            <li><strong>Line Total</strong>: This is the amount due for the particular line item. Once you have entered the Unit Cost and Quantity, this figure will be calculated automatically. If you change either value at any time during creation of the invoice, the Line Total will adjust accordingly.</li>
+                        </ul>
+                        <p>Beneath and to the right of the line item section, you’ll find the Balance Due section. It’s made up of a number of figures, all leading to the golden number – the final, total Balance Due.</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Subtotal</strong>: This is the amount due before other figures are taken into calculation, such as Tax, Partial payments, Credits, etc.</li>
+                            <li><strong>Tax</strong>: The tax rate for the invoice. Note: To apply a tax rate to the entire invoice, you must enable it first. Go to Settings &gt; Tax Rates, and check the box for “Enable specifying an invoice tax”. Select the appropriate tax rate for the entire invoice by clicking the arrow at the right side of the Tax field and selecting the relevant tax from the drop-down list.</li>
+                            <li><strong>Paid to Date</strong>: The amount paid to date, including partial payments and credits.</li>
+                            <li><strong>Balance Due</strong>: The final balance owed to you, after taxes, partial payments and credits have been deducted from the charged amount.</li>
+                        </ul>
+                        <p>Directly to the left of the Balance Due section, you’ll see a text box with a number of tabs to choose from:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Public Notes</strong>: Want to write a personal or explanatory note to the client? Enter it here.</li>
+                            <li><strong>Private Notes</strong>: Want to include some notes or comments for your eyes only? Enter them here, and only you can see them.</li>
+                            <li>Terms: Want to set terms to the invoice? Enter them here. The terms will appear on the invoice. If you want to make these the default terms for all invoices, check the Save as default terms box. Then these terms will automatically appear on each invoice you create.</li>
+                            <li><strong>Footer</strong>: Want to enter information to appear as a footer on the invoice? Enter it here. The text will appear at the bottom of the invoice. If you want to make this the default footer for all invoices, check the Save as default footer box. Then this footer will automatically appear on each invoice you create.</li>
+                            <li><strong>Documents</strong>: If you have an Enterprise account, you can attach 3rd party documents to send with your invoice. Click to upload files from your computer, or use the drag and drop feature to attach them. You can attach any type of file as long as it doesn’t exceed 10 MB in size. Note: You must enable this feature in order to attach 3rd party documents. To enable, go to Advanced Settings &gt; Email Settings and check Enable for Attach PDFs and Attach Documents.</li>
+                        </ul>
+
+                        <ul id="parragraphContent">
+                            <li><strong>Blue button – Download PDF</strong>: Download the invoice as a PDF file. You can then print or save to your PC or mobile device.</li>
+                            <li><strong>Gray button – Save Draft</strong>: Save the latest version of the invoice. The data is saved in your Invoice Ninja account. You can return to the invoice at any time to continue working on it. Note: An invoice in the Draft stage is not viewable to the client in the client portal, and the amount on the invoice is not reflected in the client’s invoicing balance.</li>
+                            <li><strong>Green button – Mark Sent</strong>: If you mark the invoice as sent, then the invoice will be viewable to your client in the client portal. The amount on the invoice will also be calculated in the client’s balance data.</li>
+                            <li><strong>Orange button - Email Invoice</strong>: Email the invoice directly via the Invoice Ninja system to the email address specified for the client.</li>
+                            <li><strong>Gray button – More Actions</strong>: Click on More Actions to open the following action list:</li>
+                            <li><strong>Clone Invoice</strong>: Duplicate the current invoice. Then you can make minor adjustments. This is a fast way to create a new invoice that is identical or similar to a previous invoice.</li>
+                            <li><strong>View History</strong>: You’ll be redirected to the Invoices / History page, where you can view a history of all the actions taken from the time the invoice was created. The Invoices / History page displays a copy of the latest version of the invoice and a drop-down list of all actions and the corresponding version of the invoice. Select the version you wish to view. Click on the blue Edit Invoice button at the top right of the page to go back to the invoice page.</li>
+                            <li><strong>Mark Paid</strong>: The invoice status is changed to Paid.</li>
+                            <li><strong>Enter Payment</strong>: Enter the payment relevant to this invoice. You’ll be redirected to the Payments / Create page.</li>
+                            <li><strong>Archive Invoice</strong>: Want to archive the invoice? Click here. The invoice will be archived and removed from the Invoices list page.</li>
+                            <li><strong>Delete Invoice</strong>: Want to delete the invoice? Click here. The invoice will be deleted and removed from the Invoices list page.</li>
+                        </ul>
+
+                        <h3>Email Invoice preview</h3>
+                        <p>When you are ready to send an invoice to the client, click the orange Email Invoice button. Before the invoice email is sent, a pop-up box will open, displaying a preview of the email. Here, you can customize the email template, including the text, data fields, and formatting. You can also view the sent history of the email.</p>
+
+                        <h3>Customizing the Invoice Email Template</h3>
+                        <p>To customize the email template, click the Customize tab. Add text or edit the default text, and use the formatting toolbar below to adjust the layout. Once you’ve finished customizing, click the Preview tab to see how the email looks.
+                            Note: The email contains variables that automatically insert the relevant data to the email, so you don’t need to type it in. Examples include the client’s name and invoice balance. To see a full list of the variables you can insert and how to write them, click the question mark icon at the right end of the email subject line header.</p>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Screen8----------------------------------------------->
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col contactPage blackPage">
+                <h2 id="infoTitle">Invoice Ninja</h2>
+            </div>
+        </div>
+        <!--JQuery and JavaScript-->
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <!--NavBar JS-->
+        <script type="text/javascript" src="JS/navBar.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

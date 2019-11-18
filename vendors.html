@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vendors</title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--Icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
+        <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <!--NavBar-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <div id="mySidenav" class="sidenav">
+                            <button class="closeButton" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+                            <h2>Invoice Ninja</h2>
+                            <hr id="navBarLine">
+                            <a href="invoice_ninja.html">Resumen</a>
+                            <a href="features.html">Features</a>
+                            <a href="categorias.html">UI</a>
+                            <a href="categorias.html">UX</a>
+                            <a href="contact.html">Conectividad Eventual</a>
+                            <a href="freealternatives.html">Free alternatives</a>
+                            <a href="paidalternatives.html">Paid alternatives</a>
+                            <a href="Mercado.html">Mercado</a>
+                        </div>
+                        <span id="optionsButton" class="pull-left" onclick="openNav()"><i class="fas fa-bars"></i></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a id="logo" href="home.html" class="pull-right"><img src="https://avatars1.githubusercontent.com/u/15712270?s=200&v=4" height="50" width="50" alt="Invoice_ninja logo"></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Page Content-->
+        <div class="container-fluid">
+            <!--Catalogue1----------------------------------->
+            <div class="row justify-content-md-center align-items-center catalogueRow">
+                <div class="col-sm-6">
+                    <h1>Vendors</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="w-100 divider"></div>
+                    <div class="col">
+
+
+                        <p>Running a business is a two way street. Sure, you serve clients and charge them for it. But you also use suppliers, companies and service providers who charge you for all the things you need to get your job done. Office supplies? Check. Coffee machine? Check. Gas for the car? Check. And a hundred-and-one other supplies and services you can name.</p>
+                        <p>Your expenses and vendors are managed with the same ease and one-click functionality as every other part of your business, right here in your Invoice Ninja account. With Invoice Ninja, managing your vendors and expenses is simple – and similar – to managing your clients and invoices. It’s only a matter of which way the money’s going…</p>
+                        <br>
+
+                        <h3>List Vendors</h3>
+                        <p>To view your Vendors list page, go to the main taskbar and click the Expenses tab. Select Vendors from the drop down menu.</p>
+                        <br>
+
+                        <h3>Overview</h3>
+                        <p>The Vendors page shows a list in table format of all companies, service providers or suppliers that you have entered to the Invoice Ninja system as part of your business activities. The table features the following data columns:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Vendor:</strong> The company name of the vendor</li>
+                            <li><strong>City:</strong> The city where the vendor is located</li>
+                            <li><strong>Phone:</strong> The phone number of the vendor</li>
+                            <li><strong>Email:</strong> The vendor’s email address</li>
+                            <li><strong>Date Created:</strong> The date the vendor was created in the system</li>
+                            <li><strong>Action column:</strong> The final column to the right features a drop-down menu with a range of actions you can take to manage the selected vendor</li>
+                        </ul>
+
+                        <br>
+
+                        <h3>Actions</h3>
+                        <p>To select an action for a particular vendor, hover with your mouse anywhere in the row entry of the vendor. A gray Select button will appear in the far right column. Click on the Select arrow and a drop-down list will open.
+                            When you click on an action, you will be automatically redirected to the relevant action page for the selected vendor.</p>
+                        <p>Here are the available actions in the drop-down list of the Action button, and the corresponding action pages that will open:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Edit Vendor</strong>: Edit the vendor’s details on the Vendors / Edit page</li>
+                            <li><strong>Enter Expense</strong>: Enter a new expense for this vendor on the Expenses / Create page TIP: The vendor’s name will automatically feature in the new expense. You won’t need to enter the vendor’s information.</li>
+                            <li><strong>Archive Vendor</strong>: Click to archive the vendor</li>
+                            <li><strong>Delete Vendor</strong>: Click to delete the vendor</li>
+                        </ul>
+                        <p>You can add a new vendor directly from the Vendors list page by clicking on the blue New Vendor + button located at the top right side of the page. The Vendors / Create page will open.</p>
+                        <br>
+
+                        <h3>Sorting &amp; Filtering Vendors</h3>
+                        <p>The sort and filter functions make it easy for you to manage and view your vendor information.
+                            Sort the vendors table by clicking on any of the tabs in the list header. A small arrow will appear. If the arrow is pointing up, data is sorted from lowest to highest value. If the arrow is pointing down, data is sorted from highest to lowest value. Click to change the arrow direction.</p>
+                        <p>Filter the vendors list by completing the Filter field, situated at the top right of the page, to the left of the blue New Vendor + button.</p>
+                        <br>
+
+                        <h3>Archiving/Deleting Vendors</h3>
+                        <p>To archive or delete a specific vendor, hover over the vendor entry row, and open the Action drop-down list. Select Archive Vendor or Delete Vendor. The Vendors table will automatically refresh, and the vendor will no longer appear in the vendors list.</p>
+                        <p>You can also archive or delete one or more vendors via the gray Archive button that appears at the top left side of the Vendors table. To archive or delete vendors, check the relevant vendors in the check boxes that appear in the far left column next to the vendor name. Then click on the Archive button, open the drop-down list and select the desired action.
+                            Want to view archived or deleted vendors? Check the box marked Show archived/deleted, situated to the right of the Archive button. The table will automatically refresh, and will now feature the full list of vendors, including current, archived and deleted vendors.</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Deleted vendors</strong> are displayed with a strikethrough and a red Deleted button in the far right column. You can choose to restore a deleted vendor. To restore a deleted vendor, hover with your mouse over the red Deleted button of the relevant deleted vendor. A gray Select button will appear. Click on the Select arrow, and choose Restore vendor from the drop-down list.</li>
+                            <li><strong>Archived vendors</strong> are displayed with an orange Archived button in the far right column.</li>
+                        </ul>
+                        <p>You can choose to restore or delete the archived vendor. To restore an archived vendor, hover with your mouse over the orange Archived button of the relevant archived vendor. A gray Select button will appear. Click on the Select arrow, and choose Restore vendor from the drop-down list. To delete an archived vendor, select Delete vendor from the drop-down list of the Select button.</p>
+                        <br>
+
+                        <h3>Create Vendor</h3>
+                        <p>To manage your earnings and expenses properly, you need a simple, effective system for every aspect of your accounts. Keeping an updated list and history of your vendors is another part of the puzzle, and, just like your clients, tasks and invoices, Invoice Ninja delivers the goods here too. Create and manage your vendor details with the familiar, fast functionality you’ve come to expect from Invoice Ninja.</p>
+                        <p>You can create a new vendor either by going directly to the Vendors/ Create page from the main taskbar, or by clicking New Vendor + on the Vendors list page. Here, we’re going to focus on entering a new vendor via the Vendors/ Create page.</p>
+                        <p><strong>Let’s Begin</strong></p>
+                        <p>To enter a new vendor, go to the Expenses tab, open the drop-down menu, and click on New Vendor. This will open the Vendors/Create page.</p>
+                        <p>The Vendors/ Create page is divided into four sections. Enter the information in the relevant fields.</p>
+                        <p>Let’s take a closer look at each section:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Organization</strong>: Enter details about the vendor’s company, including the company name, ID number, VAT number, website address and telephone number.</li>
+                            <li><strong>Contacts</strong>: Enter the name, email address and phone number of your contact person for this vendor. You can enter as many contact people as you like. To add more contact people, click +Add Contact.</li>
+                            <li><strong>Address</strong>: Enter the vendor’s street address.</li>
+                            <li><strong>Additional Info</strong>: Enter the vendor’s currency, and any other private notes or reminders you wish to add (don’t worry - no one can see them but you.)</li>
+                        </ul>
+                        <p>Once you have filled in the page, click Save to save the new vendor information. The vendor will now appear as an entry in the Vendors list page.</p>
+                        <br>
+
+                        <h3>Vendor Summary Page</h3>
+                        <p>Each vendor you create has its own summary page that displays the vendor details and related expenses. To view a vendor’s summary page, go the Vendors list page and click on the name of the vendor you wish to view. You’ll be automatically redirected to the vendor’s summary page.</p>
+                        <p>There are a number of actions you can take from the vendor summary page. Let’s check them out:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Edit Vendor</strong>: Edit the vendor’s details by clicking on the gray Edit Vendor button.</li>
+                            <li><strong>Enter Expense</strong>: Create a new expense for the vendor by clicking on the blue New Expense + button at the top right of the page.</li>
+                            <li><strong>Archive or Delete Vendor</strong>: Archive or delete the vendor by clicking on the arrow on the right hand side of the Edit Vendor button. A drop down menu will open. Select the desired action from the menu.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Screen8----------------------------------------------->
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col contactPage blackPage">
+                <h2 id="infoTitle">Invoice Ninja</h2>
+            </div>
+        </div>
+        <!--JQuery and JavaScript-->
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <!--NavBar JS-->
+        <script type="text/javascript" src="JS/navBar.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

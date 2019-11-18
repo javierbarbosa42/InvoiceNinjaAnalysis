@@ -1,0 +1,43 @@
+Informe móviles:
+2 partes.
+1) Resumen ejecutivo
+   - Describir la aplicación bajo análisis
+	- Aplicación respecto al mercado (categoría)
+	- # de ratings (promedio)
+	- Versiones liberadas
+	- Si el código fuente existe
+   - Que es la aplicación
+   - Features
+   - Estrategia de análisis
+	- Perspectivas que se usaron en el informe
+	- ej: Performance (uso de batería, CPU)
+	      Seguridad
+	- Herramientas de análisis
+   - Conclusiones / Hallazgos
+	- Que se encontró en la aplicación
+2) Informe técnico
+   - Listado de los features
+   - Iconografía
+   - Tipografía
+   - logo de producto
+   - aplicaciones similares
+   - Componentes
+	- Performance
+	- Repositorio
+	- Almacenamiento
+	- C.E
+	- Hallazgos
+3) Factor sorpresa
+   - Aplicaciones similares (cual es el factor diferenciador)
+        - cuantas estrellas tiene
+        - lineas de código
+        - frecuencias de commits
+        - Se han pasado a nuevas librerías?
+        - Licencias
+        
+bugs
+reportes de seguridad
+analiss de networking
+- casos de prueba
+- Errores encontrados
+- Solucines posibles

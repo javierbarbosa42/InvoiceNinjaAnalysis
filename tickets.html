@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tickets</title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--Icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
+        <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <!--NavBar-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <div id="mySidenav" class="sidenav">
+                            <button class="closeButton" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+                            <h2>Invoice Ninja</h2>
+                            <hr id="navBarLine">
+                            <a href="invoice_ninja.html">Resumen</a>
+                            <a href="features.html">Features</a>
+                            <a href="categorias.html">UI</a>
+                            <a href="categorias.html">UX</a>
+                            <a href="contact.html">Conectividad Eventual</a>
+                            <a href="freealternatives.html">Free alternatives</a>
+                            <a href="paidalternatives.html">Paid alternatives</a>
+                            <a href="Mercado.html">Mercado</a>
+                        </div>
+                        <span id="optionsButton" class="pull-left" onclick="openNav()"><i class="fas fa-bars"></i></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a id="logo" href="home.html" class="pull-right"><img src="https://avatars1.githubusercontent.com/u/15712270?s=200&v=4" height="50" width="50" alt="Invoice_ninja logo"></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Page Content-->
+        <div class="container-fluid">
+            <!--Catalogue1----------------------------------->
+            <div class="row justify-content-md-center align-items-center catalogueRow">
+                <div class="col-sm-6">
+                    <h1>Tickets</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="w-100 divider"></div>
+                    <div class="col">
+
+                        <p>The Invoice Ninja ticketing system will allow you to manage your client and your internal staff communications where ever you are.</p>
+                        <br>
+                        
+                        <h3>Tickets Listing Page</h3>
+                        <p>The ticket listing page displays all of your tickets, who they are from and who they are delegated to. A smart icon system allows you to easily understand the status of each ticket and any actions required.</p>
+                        <p>Lets take you through each column of the ticket listing page:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>Ticket Number</strong>: The is a unique incrementing integer value which is used to track tickets. You can see where you want your counter to start by editing the counter value in Settings &gt; Tickets &gt; Defaults</li>
+                            <li><strong>Client Name</strong>: The name (and link to) the client.</li>
+                            <li><strong>Contact</strong>: The contact who has opened the ticket or is assigned to the ticket.</li>
+                            <li><strong>Subject</strong>: The subject of the ticket.</li>
+                            <li><strong>Status</strong>: The status of the ticket - see Ticket Lifecycle for more information on the different statuses available.</li>
+                            <li><strong>Due Date</strong>: The date that the ticket is due for resolution (marked as closed).</li>
+                            <li><strong>Icons</strong>: An array of icons which provide easily accessible information such as whether the ticket is assigned, internal, awaiting reply or overdue.</li>
+                        </ul>
+                        <p>You can filter the list by selecting from the filter drop the drop down filtering is available on the ticket state and/or status.</p>
+                        <br>
+
+                        <h3>Ticket Lifecycle</h3>
+                        <p>The ticket lifecycle is tracked by its status, these are:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>New</strong>: New Ticket, which has not been responded to.</li>
+                            <li><strong>Open</strong>: Ticket which is in progress and has at least one reply from an agent.</li>
+                            <li><strong>Merged</strong>: Ticket which has been closed and merged into another ticket.</li>
+                            <li><strong>Closed</strong>: Ticket which has been finalised.</li>
+                        </ul>
+                        <p>There are three main view angles when considering tickets:</p>
+                        <ul id="parragraphContent">
+                            <li><strong>1. Admin View</strong>:</li>
+                            <li><strong>2. Agent View</strong>:</li>
+                            <li><strong>3. Client View</strong>:</li>
+                        </ul>
+                        <br>
+                        
+                        <h3>Admin View</h3>
+                        <p>The admin view displays all ticket listings and to whom the are delegated. New tickets can be created / assigned / managed by administrators.</p>
+                        <p>The Invoice Ninja ticket system has the concept of a ‘Ticket Master’ This is a super-admin user who has total oversight of the ticketing system and is also the primary point of contact for internal and external users.</p>
+                        <p>By default the company owner will be assigned as the Ticket Master, however the Ticket Master can be set to any user in the system by toggling the Ticket Master in the settings.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Screen8----------------------------------------------->
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col contactPage blackPage">
+                <h2 id="infoTitle">Invoice Ninja</h2>
+            </div>
+        </div>
+        <!--JQuery and JavaScript-->
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <!--NavBar JS-->
+        <script type="text/javascript" src="JS/navBar.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
