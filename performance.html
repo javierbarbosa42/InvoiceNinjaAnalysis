@@ -7,7 +7,7 @@
         <!--Icons-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">
         <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
         <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
         <!--Fonts-->
@@ -51,14 +51,453 @@
             <!--Catalogue1----------------------------------->
             <div class="row justify-content-md-center align-items-center catalogueRow">
                 <div class="col-sm-6">
-                    <h1>Performance</h1>
+                    <h1>Perfor- <br> mance</h1>
                 </div>
                 <div class="col-sm-6">
                     <div class="w-100 divider"></div>
                     <div class="col">
 
-                        
+                        <p>For the performance analysis of the app we took every feature of the app and gave it heavy use for a period of time to see how it responded on the phone. To achieve this, we used the android studio profiler on the android-side part of the app. This gave us a tool to see a graphic representation of how the app was performing on different aspects as CPU usage, memory usage, network usage and energy. After running these tests, we found that every feature behaved similarly. The reason for this at the conclusions section.</p>
+                        <br>
 
+
+                        <h3>Dashboard</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Dashboard/Dashboard_PerformanceOverview.png" height="300" width="700" alt="Dashboard performance overview"></a>
+
+                        <br>
+                        <br>
+
+                        <p>The abobe graph is showed as an overview of the performance. For the test, this view was reloaded and played with many times as it can be seen in the interaction section (represented as the red dots on top of the image). We tried all possible interactions of this view to test how well it was managed. We will now dive on detail on the different aspects the profiler shows.</p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Dashboard/Dashboard_CPU.png" height="300" width="700" alt="Dashboard CPU usage"></a> <br>
+                        <br>
+
+                        <p>Even though the graph shows moments where there are more than one thread running at the same time, this are used for little cases and most of them are used in Future calls and on async methods. This might show how the usage of multithreading is being used, but by reading the docs we know dart is a single threaded language, although there is Isolates which can serve as new threads in execution. We will discuss threading in the Multithreading section.</p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Dashboard/Dashboard_Memory.png" height="300" width="700" alt="Dashboard Memory usage"></a>
+                        <br>
+                        <br>
+
+                        <p>As shown above, the memory for this feature never surpasses the 256MB limit. Most of this memory is used is for the app heap to run code. If we divide the memory used by packages, the shallow size for the different packages using memory are the java package for the use of primitive values and data structures.</p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Dashboard/Dashboard_NW.png" height="300" width="700" alt="Dashboard Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p>For the network analysis, because of the nature of the feature, the network usage is as little as the user wants to reload the data in the view. For this reason, there is almost no network usage between the requests for reload.</p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Dashboard/Dashboard_EN.png" height="300" width="700" alt="Dashboard energy usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p>There is a positive correlation between the network usage and the energy peaks on the above graph. Although there is peaks in the energy consumption, this consumption is always categorized as light. </p>
+
+                        <br>
+                        <br>
+
+                        <h3>Clients</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Clients/Clients_Overview.png" height="300" width="700" alt="Clients performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p>For the clients overview the above graph shows a similar behavior as the dashboard feature. Low use of network and energy outstand in this overview. Similar usage of memory and very low usage of CPU except for the launching of the app (beginning). It important to note how in the activity representation of the app (green line below the interactions in red dots), due to one of the features of the app that let send emails to their clients, at the moment of tapping that option, the app opens up the default emailing app of the phone so Invoice Ninja is put to sleep. </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Clients/Clients_CPU.png" height="300" width="700" alt="Clients CPU usage"></a> <br>
+
+                        <br>
+
+                        <p>The CPU usage for this feature is similar to the Dashboard, giving an average use of less than 20% inside the app. </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Clients/Clients_Memory.png
+" height="300" width="700" alt="Clients Memory usage"></a>
+                        <br>
+                        <br>
+
+                        <p>Bear in mind that there is a gap at the start of the trace that is recording memory usage outside the app. Once again, the biggest use of memory is by native libraries, followed by code and graphics. There is another category that sums the rest of usages of memory called “Others” that is also important.</p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Clients/Clients_NW.png" height="300" width="700" alt="Clients Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p>The network is used in this feature is used to retrieve data from the server on client contacts. That is why the graph shows peaks at the beginning (fetching) and at the end of the profiling, where new contacts were added.</p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Clients/Clients_EN.png" height="300" width="700" alt="Clients energy usage"></a> <br>               <br>
+                        <p>The energy profiling of this feature shows how the energy use is low for this feature. </p>
+                        <br>
+
+                        <p> As shown above different features behave the same way one from other. The CPU, memory, network and energy usages are represented in a similar fashion by the graphics. For the next features, the overview and speciphics is going to be showed:  </p>
+
+                        <br>
+                        <br>
+
+                        <h3>Products</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Products/Products_Overview.png" height="300" width="700" alt="Products performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Products/Products_CUP.png" height="300" width="700" alt="Products CPU usage"></a> <br>
+
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Products/Products_Memory.png
+" height="300" width="700" alt="Products Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Products/Products_NW.png" height="300" width="700" alt="Products Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Products/Products_EN.png" height="300" width="700" alt="Products energy usage"></a> <br>               <br>
+                        <p></p>
+
+                        <br>
+                        <br>
+
+                        <h3>Invoices</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_Overview.png" height="300" width="700" alt="Invoices performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_CPU.png" height="300" width="700" alt="Invoices CPU usage"></a> <br>
+
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_Memory.png
+" height="300" width="700" alt="Invoices Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_NW.png" height="300" width="700" alt="Invoices Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_Energy.png" height="300" width="700" alt="Invoices energy usage"></a> <br>               <br>
+                        <p></p>
+
+                        <br>
+                        <br>
+
+                        <h3>Payments</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Payments/Payment_Overview.png" height="300" width="700" alt="Payments performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Payments/Payment_CPU.png" height="300" width="700" alt="Payments CPU usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Payments/Payment_Memory.png" height="300" width="700" alt="Payments Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Payments/Payment_NW.png" height="300" width="700" alt="Payments Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Payments/Payment_Energy.png" height="300" width="700" alt="Payments energy usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+                        <br>
+
+                        <h3>Quotes</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Quotes/Quotes_Overview.png" height="300" width="700" alt="Quotes performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Quotes/Quotes_CPU.png" height="300" width="700" alt="Quotes CPU usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Quotes/Quotes_Memory.png" height="300" width="700" alt="Quotes Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Quotes/Quotes_NW.png" height="300" width="700" alt="Quotes Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Quotes/Quotes_Energy.png" height="300" width="700" alt="Quotes energy usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+                        <br>
+
+                        <h3>Projects</h3>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Projects/Projects_Overview.png" height="300" width="700" alt="Projects performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Projects/Projects_CPU.png"height="300" width="700" alt="Projects performance overview"></a>
+
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Projects/Projects_Memory.png" height="300" width="700" alt="Projects Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Projects/Projects_NW.png" height="300" width="700" alt="Projects Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Projects/Projects_Energy.png" height="300" width="700" alt="Projects energy usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+                        <br>
+
+                        <h3>Tasks</h3>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Tasks/Tasks_Overview.png" height="300" width="700" alt="Tasks performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Tasks/Tasks_CPU.png"height="300" width="700" alt="Tasks performance overview"></a>
+
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Tasks/Tasks_Memory.png" height="300" width="700" alt="Tasks Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Tasks/Tasks_NW.png" height="300" width="700" alt="Tasks Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Tasks/Tasks_Energy.png" height="300" width="700" alt="Tasks energy usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+                        <br>
+
+                        <h3>Vendors</h3>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Vendors/Vendors_Overview.png" height="300" width="700" alt="Vendors performance overview"></a>
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>CPU</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Vendors/Vendors_CPU.png" height="300" width="700" alt="Vendors performance overview"></a>
+
+                        <br>
+                        <br>
+
+                        <p> </p>
+
+                        <br>
+
+                        <h4>Memory</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Vendors/Vendors_Memory.png" height="300" width="700" alt="Vendors Memory usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Network</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Vendors/Vendors_NW.png" height="300" width="700" alt="Vendors Network usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+
+                        <h4>Energy</h4>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/Vendors/Vendors_Energy.png" height="300" width="700" alt="Vendors energy usage"></a>
+
+                        <br>
+                        <br>
+
+                        <p></p>
+
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
