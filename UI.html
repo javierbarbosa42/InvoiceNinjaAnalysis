@@ -30,12 +30,14 @@
                             <a href="summary.html">Resumen</a>
                             <a href="generalDescription.html">General Description</a>
                             <a href="features.html">Features</a>
-                            <a href="categorias.html">UI</a>
-                            <a href="categorias.html">UX</a>
-                            <a href="contact.html">Conectividad Eventual</a>
+                            <a href="UI.html">UI</a>
+                            <a href="UX.html">UX</a>
+                            <a href="performance.html">Performance</a>
+                            <a href="eventualConectivity.html">Conectividad Eventual</a>
                             <a href="freealternatives.html">Free alternatives</a>
                             <a href="paidalternatives.html">Paid alternatives</a>
-                            <a href="Mercado.html">Mercado</a>
+                            <a href="Mercado.html">Market</a>
+                            <a href="arquitecture.html">Architecture</a>
                         </div>
                         <span id="optionsButton" class="pull-left" onclick="openNav()"><i class="fas fa-bars"></i></span>
                     </ul>
@@ -116,11 +118,428 @@
                             <li>Tabs</li>
                             <li>Action Panels</li>
                             <li>Scroll View</li>
+                            <li>Navigation Drawer</li>
                         </ul>
-                        
-                        
+                        <p>The <strong>Icons</strong> are very few. We classified as icons the three bars at the top left and the arrows to the right of the date interval. They are the deault icons.</p>
+                        <hr>
+                        <br>
+                        <p>We will take a look now at the <strong>client screen</strong>:</p>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/clientScreen.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/clientScreen2.png?raw=true" style="width: 25%">
+                        <p>We can see right of the bat that the same basic and simple layout is used. In our case, a test client (along with test of every other feature) was used, just to illustrate the functionality.</p>
+                        <p>The color palette doesn't change. Having the same distribution even of colors <strong>**</strong></p>
+                        <p>The font and typography does not change either having the choice of Roboto for this and every other view <strong>**</strong></p>
+                        <p>Aesthetically this is a more pleasant screen to look at. The simplistic design of the bars and the content is a relaxing and not overly charged view. </p>
+                        <p>We can see that this screen adds a few <strong>components</strong> but it get's rid of the <strong>tabs</strong> some of this components include: </p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Phone status bar</li>
+                            <li>Actions panel</li>
+                            <li>Scroll view</li>
+                            <li>Lists</li>
+                            <li>Bottom action bar</li>
+                            <li>Navigation drawer</li>
+                        </ul>
+                        <p>As far as icons go, we see the bars of the navigation drawer, the "AZ" that is used to choose between alphabetically in ascending order or descending order. The bars to the right of the "AZ" that are used to filter out content. All this icons are icons that belong to <strong>material design</strong>. Which is fitting given that the <strong>metaphor</strong> is also material design. A few basic icons from <strong>material design</strong> can be found in the Android material design page by <a href="https://material.io/design/iconography/system-icons.html#design-principles">Clicking here</a> but a select few can be seen in this image: </p>
+                        <img src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1r92nVj2f-AKaguIXlSMdWyMI_MGXobDk%2Fsystem-icons-design-priniciples-01.png" style="width: 100%">
+                        <br>
+                        <hr>
+
+                        <p>If we click a client, we go into the details of the client, which correspond the the next screen: </p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/clientDetail1.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/clientDetail2.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/clientDetail3.png?raw=true" style="width: 25%">
+                        <p>The images above correspond to the client detail view. There is a lot more content to see in this detail vew that there was in the previous view. We will do our best to extract every component and detail we can from this images.</p>
+                        <p>As we can see, color palette and font don't change. They stay consistent throughout the application. ¿What changes then? Well, there are a lot more <strong>componetns &amp;icons </strong>in this view. Let's see the components:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Tabs</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                        </ul>
+                        <p>There are a lot more icons on this screen than on the previous screen. As every feature inside of the client has it's own icon.</p>
+                        <p>We can see that every icon is desgined in a simple and minimalistic way, <strong>following the material design metaphor</strong>, just exposing the outline of each icon, in a representative icon of the feature (payment is a credit card, task is a clock, and so on.</p>
+                        <p>We can see other icons that are representative of <strong>material design</strong> in the form of the back button and the three  lined dots at the top left of the screen.</p>
+                        <p>Going to the second tab, we see some more features that the client has. Some of them being:</p>
+                        <ul id="parragraphContent">
+                            <li>Client email</li>
+                            <li>Client website</li>
+                            <li>Cient number</li>
+                            <li>Client Address</li>
+                        </ul>
+                        <p>similarly to the dashboard screen, we can see the activity tab here as well, <strong>both have the same content</strong>. The icons and components are the same as the previous tabs.</p>
+                        <br>
+                        <hr>
+                        <p>We will see now the product screen:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/productScreen.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/productScreen2.png?raw=true" style="width: 25%">
+                        <p>The third feature. Products. Has similar content as the ones that have already been explained.</p>
+                        <p>First let's take a look at the components and the icons. Given that the two previous items are the same in every view.</p>
+                        <p>As far as components go, we have some similarities with the previous screens. Some of them are:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Bottom Action bar</li>
+                            <li>Action panel</li>
+                            <li>Status bar</li>
+                            <li>Navigation drawer</li>
+                        </ul>
+                        <p>As we can see, the components are similar in every screen with just some minor changes</p>
+                        <p>We can see that there are some similar icons to the ones that have been shown previously, some of them are:</p>
+                        <ul id="parragraphContent">
+                            <li>we see the bars of the navigation drawer</li>
+                            <li>the "AZ" that is used to choose between alphabetically in ascending order or descending order</li>
+                            <li>The bars to the right of the "AZ" that are used to filter out content</li>
+                        </ul>
+                        <br>
+                        <hr>
+                        <p>We will see now the detailed view inside a product</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/productDetail.png?raw=true" style="width: 25%">
+                        <p>As can be seen in the image above, this is one of the most simple screens in the application, showing only basic information about the product in question. Icons are different only in the sense that this screen has less of them and has a back button icon.</p>
+                        <hr>
+                        <br>
+                        <p>We will se now the invoice screen:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/invoiceScreen.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/invoiceScreen2.png?raw=true" style="width: 25%">
+                        <p>This screen has some share characteristics with the client screen. It has for example:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                            <li>Bottom Action bar</li>
+                        </ul>
+                        <p>Icons are also similar. Some of the icons include</p>
+                        <ul id="parragraphContent">
+                            <li>we see the bars of the navigation drawer</li>
+                            <li>the "AZ" that is used to choose between alphabetically in ascending order or descending order</li>
+                            <li>The bars to the right of the "AZ" that are used to filter out content</li>
+                            <li>The navigational drawer lines</li>
+                        </ul>
+                        <br>
+                        <hr>
+                        <p>We can see the invoice screen in the next image:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/invoiceScreen.png?raw=true" style="width: 25%">
+                        <p>Some of components used for this screen are the following:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                            <li>Bottom Action bar</li>
+                        </ul>
+                        <p>As we can see, the color palette and the font are the same shades of bluew and Roboto which have been present so far. This screen includes an additional icon. The images icon.</p>
+                        <br>
+                        <hr>
+                        <p>If you click in an invoice it will take you to the invoice detail screen:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/invoceDetail1.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/invoiceDetail2.png?raw=true" style="width: 25%">
+                        <p>This screen is probably one of the most packed screens in terms of componets, nevertheless <strong>aesthetically</strong>, its one of the most pleasant to look at; the way it is organized and presented, the way the developers combined lists with grids, and the choice of font really makes it all come together. Some of the components are:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            <li>Grid view</li>
+                            <li>Tabs</li>
+                            In the secon tab it additionaly has
+                            <li>Image container</li>
+                            <li>Grid view</li>
+                        </ul>
+                        <p>The icons are very much similar from the ones before, and even the different ones are in accordance to the <strong>material design metaphor</strong>, those different ones include profile, camera and document.</p>
+                        <br>
+                        <hr>
+                        <p>The next feature is the payment feature: </p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/paymentScreen.png?raw=true" style="width: 25%">
+                        <p>The components in this screen don't vary from the ones of the previous screens:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            <li>Bottom Action bar</li>
+                            <li>Navigational drawer</li>
+                        </ul>
+                        <p>As far as the aesthetics of the screen; again, having it be a list view with only the basics is not really beneficial for the <strong>look and feel</strong> of the application. It makes it look as though there wasn't a lot of work put into it. It's not bad or ugly, but it can be much better.</p>
+                        <p>Looking at the icons we can see that there is not much added. The order icon, the filter icon and the navigational drawer icon.</p>
+                        <br>
+                        <hr>
+                        <p>If a payment is clicked on it will redirect the customer to the payment detail screen:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/paymentDetail1.png?raw=true" style="width: 25%">
+                        <p>In this screen we can see a combination of several components, which make the aplication more pleasant to look at. Some of them are:</p>
+                        <ul id="parragraphContent">
+                            <li>Action bar</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            <li>Grid view</li>
+                            <li>Tabs</li>
+                        </ul>
+                        <p>Some of the icons inlude:</p>
+                        <ul id="parragraphContent">
+                            <li>Profile</li>
+                            <li>Document</li>
+                            <li>Edit payment</li>                           
+                        </ul>
+                        <hr>
+                        <br>
+                        <p>That takes care of that screen. Let's go to another feature: quotes</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/quoteScreen.png?raw=true" style="width: 25%">
+                        <p>The quote feature is essentialy the same in regards to components, font, aesthetics and icons (of course not functionality) in comparison with invoices.</p>
+                        <p>Some of the components of the quote screen are:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                            <li>Bottom Action bar</li>
+                        </ul>
+                        <p>Some of the icons include</p>
+                        <ul id="parragraphContent">
+                            <li>we see the bars of the navigation drawer</li>
+                            <li>the "AZ" that is used to choose between alphabetically in ascending order or descending order</li>
+                            <li>The bars to the right of the "AZ" that are used to filter out content</li>
+                            <li>The navigational drawer lines</li>
+                        </ul>
+                        <p>Clicking on a quote will take you to the quote detail page:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/quoteDetail1.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/quoteDetail2.png?raw=true" style="width: 25%">
+                        <p>The quote detail page is funny enough almost the same as the invoice page. Having pretty much the same components, icons, font and overall aesthetics</p>
+                        <p>In more detail, components and icons are the following: </p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            <li>Grid view</li>
+                            <li>Tabs</li>
+                            Additionaly:
+                            <li>Image container</li>
+                            <li>Grid view</li>
+                        </ul>
+                        <p>As far as icons: </p>
+                        <ul id="parragraphContent">
+                            <li>Profile</li>
+                            <li>Document</li>
+                            <li>Picture</li>                           
+                            <li>back button</li>
+                            <li>Options button</li>
+                        </ul>
+                        <br>
+                        <hr>
+                        <p>We are halfway there.</p>
+                        <p>The next screen to take a look at is the project screen:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/projectScreen.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/projectScreen2.png?raw=true" style="width: 25%">
+                        <p>The project screen has the same as the client, payment and a few other screens.</p>
+                        <p>Taking a look through the image we see that the order button (AZ) has been clicked. It's important to know how the button works, we see in this case it offers us ascending order or order of update.</p>
+                        <p>Moreover, let's take a look at the components of the screen: </p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Phone status bar</li>
+                            <li>Actions panel</li>
+                            <li>Scroll view</li>
+                            <li>Lists</li>
+                            <li>Bottom action bar</li>
+                            <li>Navigation drawer</li>
+                        </ul>
+                        <p>As far as icons go, we see the bars of the navigation darawer, the "AZ", the bars to the right of the "AZ" and the navigational drawer icon.</p>
+                        <p>Clicking on one of the projects will take you to a project detail screen</p>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/projectDetail1.png?raw=true" style="width: 25%">
+                        <p>This project screen has some of the components shown previously, except tabs and everything that  has been placed inside the tabs.</p>
+                        <p>Components</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            <li>Grid view</li>
+                        </ul>
+                        <p>Icons: </p>
+                        <ul id="parragraphContent">
+                            <li>Profile</li>
+                            <li>Document</li>
+                            <li>Picture</li>                           
+                            <li>back button</li>
+                            <li>Options button</li>
+                        </ul>
+                        <br>
+                        <hr>
+                        <p>That has been a lot of content. Take a 5 second break, look at this gif:</p>
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="PIBpclD"><a href="//imgur.com/PIBpclD">Stealth slap!</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <p>Funny right? So interesting to see how animals interact. But let's move on.</p>
+                        <hr>
+                        <br>
+                        <p>Task is another feature offered by Invoice Ninja. It's very similar to every other feature shown before, nevertheless here we can see the use of all the buttons at the bottom bar (Apart from the action button which will come later) in case it was not clear what each of them did.:</p>
+                        <li id="parragraphContent">Basic task screen</li>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/taskScreen.png?raw=true" style="width: 25%">
+                        <li id="parragraphContent">Filter task by logged, running or invoiced (image button)</li>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/taskScreen2.png?raw=true" style="width: 25%">
+                        <li id="parragraphContent">Filter task by active, archived or deleted (Triangle bars button)</li>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/taskScreen3.png?raw=true" style="width: 25%">
+                        <li id="parragraphContent">Organize by update date, duration or description (AZ button)</li>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/taskScreen4.png?raw=true" style="width: 25%">
+                        <p>With respect to components we see the following in the task feature: </p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                            <li>Bottom Action bar</li>
+                        </ul>
+                        <p>Some of the icons include</p>
+                        <ul id="parragraphContent">
+                            <li>we see the bars of the navigation drawer</li>
+                            <li>the "AZ" that is used to choose between alphabetically in ascending order or descending order</li>
+                            <li>The bars to the right of the "AZ" that are used to filter out content</li>
+                            <li>The navigational drawer lines</li>
+                        </ul>
+                        <p>Clicking on a task gives us a detailed view of each task: </p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/taskDetail1.png?raw=true" style="width: 25%">
+                        <p>Looking through the detail view we can see that is shares a lot of similarities with screens like project detail &amp; quote detail</p>
+                        <p>Of course, the components and icons will be shared as well: </p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            <li>Grid view</li>
+                            <li>Tabs</li>
+                            Additionaly:
+                            <li>Image container</li>
+                            <li>Grid view</li>
+                        </ul>
+                        <p>As far as icons: </p>
+                        <ul id="parragraphContent">
+                            <li>Profile</li>
+                            <li>Document</li>
+                            <li>Picture</li>                           
+                            <li>back button</li>
+                            <li>Options button</li>
+                        </ul>
+                        <br>
+                        <hr>
+                        <p>Next, the vendor feature: </p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/vendorScreen.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/vendorScreen2.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/vendorScreen3.png?raw=true" style="width: 25%">
+                        <p>We can see, similar to the task feature, the vendor feature features has also buttons to organize and to filter by a couple of characteristics (AZ and three bar button respectively)</p>
+                        <p>Some of the components are: </p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Scroll view</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                            <li>Bottom Action bar</li>
+                        </ul>
+                        <p>Some of the icons include</p>
+                        <ul id="parragraphContent">
+                            <li>the "AZ"</li>
+                            <li>The bars to the right of the "AZ" that are used to filter out content</li>
+                            <li>The navigational drawer lines</li>
+                        </ul>
+                        <p>Similar to the other features, clicking on a feature will let you access a more detailed view of this feature. In the case of vendors we have the following screens:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/vendorDetail1.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/vendorDetail2.png?raw=true" style="width: 25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/vendorDetail3.png?raw=true" style="width: 25%">
+                        <p>Here we can see that this screen has a couple components that are present in the other screens.<strong>Nevertheless, </strong> the components are divided differently, this means on one screen we have some components and on the other screen we have some other components.</p>
+                        <ul id="parragraphContent">On the first screen (Overview) we have components like
+                            <li>Action bar</li>
+                            <li>Tabs</li>
+                            <li>Lists</li>
+                            <li>Phone status bar</li>
+                            On the other hand, on the second tab (Details) we can see:
+                            <li>List</li>
+                            <li>Scroll view</li>
+                        </ul>
+                        <p>We can see in this screen the options that are available when clicking the button on the top right corner of the screen. Showing us options to archive or delete</p>
+                        <br>
+                        <hr>
+                        <p>Alright. We have seen the different components and views of the application. So far, the application seems very similar in general, most screens share the same components or a variation of them. The color palette has been the same and of course the font has also been the same. But we haven't shown one screen, when there is nothing to see, when the feature is empty. Next feautre, expenses, will show exaclty that, what can we see when there is nothing in the feature?</p>
+                        <p>Let's see:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/expenseScreen.png?raw=true" style="width: 25%">
+                        <p>As we can see, When the feature is empty, the application has <strong>very little functionality</strong>. Without nothing to work with there is <strong>no use</strong> for the buttons at the bottom. Search button us also useless.</p>
+                        <p>Besides the use of the buttons (for which there is none). The only information displayed in the screen is "no recors found". In the middle of the screen.</p>
+                        <p><strong>Nevertheless</strong>, the components of this screen are the following:</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists?</li>
+                            <li>Scroll view?</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                            <li>Bottom Action bar</li>
+                        </ul>
+                        <p>Some of the icons include</p>
+                        <ul id="parragraphContent">
+                            <li>Navigational drawer bars</li>
+                            <li>The "AZ" that is used to choose between alphabetically in ascending order or descending order</li>
+                            <li>Organize bars</li>
+                        </ul>
+                        <br>
+                        <hr>
+                        <p>Settings screen:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/settingsScreen.png?raw=true" style="width: 25%">
+                        <p>The settings screen, shown above. Shares some of the components of the other screens. But most of them are not in this screen. The settings screen is one of the most minimalistic screens of the application. It only has for 3 different user choices</p>
+                        <ul id="parragraphContent"><li>
+                            Dark mode</li>
+                            <li>Biometric Authentication</li>
+                            <li>Auto Start Tasks</li>
+                        </ul>
+                        <p>It also has the option to <strong>refresh data</strong>. Why refresh?</p>
+                        <p>Refresh is an option offered in this application given it's nature. As explained in the <a href="generalDescription.html" style="color:blue"><u>general description</u></a> section, this application has a both mobile and web sides. In the web side the users are able to do just as much as in the mobile version. Therefore users are able to create invoices, clients, products, etc... in the web application. But it would be really useless if what you did on the web app did not transfer to the mobile version. This is what the <strong>refresh</strong> button is for. Refresh mobile version and update anything that is not up to date with the web version.</p>
+                        <p>Components include</p>
+                        <ul id="parragraphContent">
+                            <li>Actions bar</li>
+                            <li>Lists</li>
+                            <li>Navigation Drawer</li>
+                            <li>Phone status bar</li>
+                            <li>Action Panel</li>
+                        </ul>
+                        <p>Icons include</p>
+                        <ul id="parragraphContent">
+                            <li>Navigational drawer bars</li>
+                            <li>Dark mode</li>
+                            <li>Clock (task)</li>
+                            <li>Lock icon</li>
+                            <li>Refresh Icon</li>
+                            <li>Log out icon</li>
+                        </ul>
+                        <p>That takes care of all the <a href="features.html" style="color: blue"><u>features</u></a> of the application.</p>
+                        <p>But we have talked a lot about the <strong>navigational drawer</strong>, however, we haven't showed what this looks like or what options and choices can we click inside it.</p>
+                        <hr>
+                        <br>
+                        <p>Next we will take a look at the navigational drawer:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/optionsPanelScreen.png?raw=true" style="width: 25%">
+                        <p>Here we see all the features of the application. Besides that we have three extra buttons at the bottom of the drawer.</p>
+                        <ul id="parragraphContent">
+                            <li>A "Message button"</li>
+                            <li>A "Question button"</li>
+                            <li>An "Information button"</li>
+                        </ul>
+                        <p>What are this buttons for? Which view or screen do they lead to?</p>
+                        <ul id="parragraphContent">
+                            <li>Message button takes you to an Invoice Ninja website: <a href="www.invoiceninja.com/contact" style="color: blue"><u>invoiceninja.com/contact</u></a>. So it doesn't redirect to a view inside the application but rather to a webpage on a browser.</li>
+                            <li>Question button also takes to to an Invoice Ninja webside: <a href="docs.invoiceninja.com" style="color: blue"><u>docs.invoiceninja.com</u></a>. This means it also doesn't redirect to a view in the application but rather to a webpage on a browser. </li>
+                            <li>The information button though, does show something inside the application, this however is not a view. But rather a <strong>component</strong>. Shown in the image below, we can see that when clicking the question mark button it pops up a <strong>dialog</strong>. Which hadn't been seen previously in the application</li>
+                        </ul>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Images/ContentImages/Views/optionsPanelScreen2.png?raw=true" style="width: 25%">
+
+
                         <br><br><br><br>
                         <p><strong>* Given that the metaphors apply to the application itself rather than to each screen individually, it will only be explained once.</strong> </p>
+                        <p><strong>** Given that the color palette applies the entire application (As is seen in the other views) not much attention will be given to this item beyond this point.</strong> </p>
+                        <p><strong>** Given that the font (Roboto) is used in the entire application (As is seen in the other views) not much attention will be given to this item beyond this point.</strong> </p>
                     </div>
                 </div>
             </div>
