@@ -66,7 +66,7 @@
                         <hr>
 
                         <p>In this first gif (or gif). We see the app when it is just started. Right of the bat we can notice the long wait time required for the application to deploy. This is after opening it and closing it multiple times. This long time affects the <strong>user experience</strong>; with a long wait for the application to be started </p>
-                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif1.gif?raw=true" width="25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif1.gif?raw=true">
                         <p>As we see in the gif above, the wait time for the application to start is unusually long. But there is something else to notice in this small gif.</p>
                         <p>Notice that right when you start the application you are placed on the last open feature. This happens with this and with every other feature, including the settings feature (there is a special case with the settings which will be showed later). This means that there is no home page, or landing page. When the user starts the application (even when closing the application), he is placed on the last used feature, there should be a landing page (a page like the dashboard), that is easily recognizile as the first thing the user sees.  This to provide structure to the application, it gives the user something to familiarize himself, a home page.</p>
                         <p>That is <strong>not</strong> all though. It's not noticable, but when the back button is clicked there is a huge wait that takes you to the dashboard. Again, it is not noticable because we can't show the back button, but believe s when we say that the first thing we do is click the back button right after landing on the vendor page</p>
@@ -74,7 +74,7 @@
                         <hr>
 
                         <p>Let's look at the second gif</p>
-                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif2.gif?raw=true" width="25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif2.gif?raw=true">
                         <p>In this second gif we can notice several different fallacies.</p>
                         <ul id="parragraphContent">
                             <li>First, we see that when in the add a new vendor page there are a lot of spaces to complete. Clicking on one of this spaces opens up the keyboard. That's perfectly fine. But when clicking another tab inside this page we can notice that the keyboard does not close. It keeps on even after there would be nowhere to write because there is no writing spaces clicked or active at the moment</li>
@@ -85,14 +85,30 @@
                         <hr>
 
                         <p>In this third gif, we were able to replicate an error when the application launches. As it can be seen below, we see that sometimes, when the application launces, the user is taken directly to the last active page (we have explained this before so let's move on), but besides that, the user is taken to the filter page but the <strong>real fallacy</strong> is that the user is placed directly as if he wanted to filter out content, full keyboard on. As if the user wanted to filter out something right when he starts the application</p>
-                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif3.gif?raw=true" width="25%">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif3.gif?raw=true">
                         <br>
                         <hr>
 
                         <p> In this fourth gif we can see some other things, we will do our best to explain what is going on and what we can analyze from this:</p>
-                        <img src="">
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif4.gif?raw=true">
+                        <p> First, we are placed in the Dashboard screen, this is from where the gif starts. From here what the user (we) does, is to click feature after feature, just going screen after screen, imagine a scenario where the user does a couple of things in a screen, then goes to another screen and does a couple of things, then another and so on. This is all good and dandy. Works <strong>perfectly fine</strong>.</p>
+                        <p> Then imagine a scenario where the user does something on a screen, goes to another screen but quickly remembers something he had to do or see on the previous screen. <strong> What is the natural reaction?</strong> click the back button of the phone (not visible given the phone model but is the default back button). But what happens after the user clicks the back button? Look at what happens after the invoice screen.</p>
+                        <p><strong>The user goes to the Dashboard screen.</strong> He is not placed on the previous screen. He is placed on the Dashboard screen.</p>
+                        <p>But that is not all. After invoice -> Dashboard, the user goes to quotes, and hit's the back button again. What happens? The user goes to the Dashboard screen, as explained earlier. But then in this screen the users hits the back button again, what happens in this case? <strong>The user is exited out of the application</strong>. Not only he is exited out of the application, but if we look closely we notice that there is <strong>no confirmation</strong> or any type of notification telling the user that hitting the back button will exit the application. There is no message telling the user to hit the back button twice to exit, or anything similar, he is just expelled out of the app.</p>
+                        <p>Now in all fairness, going to the Dashboard when hitting the back button is probably nothing to worry about, in fact, it maybe was probably intended this way. If the user accessed all the screens one after another going back would take forever. This is a logic that could be user to have this as intended.</p>
+                        <br>
+                        <hr>
 
+                        <p> This fifth gif is a continuation of the previous one, it had to be divided in two given the content that was found in it:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif5.gif?raw=true">
+                        <p>What can be extracted from this gif?</p>
+                        <p>Take a look at the screen in which we are at. The setting screen. Now we follow the same logic as in the previous analysis. Hit the back button, but what happens in this case? <strong>the user exits the application</strong>. He is not placed in the Dashboard, as every other screen, but rather he exits the application. This is not congruent with the other screens and the functionality of the rest of the application</p>
+                        <p>There is another small thing to notice though. When the user hit's the back button and exits the application <strong> he is not notified or he told that hitting the back button will exit the application</strong>. It just closes, no information or alert is given to the user</p>
+                        <br>
+                        <hr>
 
+                        <p>Let's take a look now at an expansion of the analisys done previously:</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif6.gif?raw=true">
 
 
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
