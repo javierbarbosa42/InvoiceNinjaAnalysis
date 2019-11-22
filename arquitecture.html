@@ -101,6 +101,7 @@
 
                         <p><strong>expense_edit_vm.dart</strong></p>
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsExpenseEdit.png" height="300" width="700" alt="SharedPreferences in Main file.">
+                        <br>
 
                         <p>In this file, the SharedPreferences library is used for getting selected preferences on whether to sen an email after registering an expense.</p>
 
@@ -123,8 +124,11 @@
                         <br>
 
                         <p><strong>settings_list_vm.dart</strong></p>
+                        <br>
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsSettingsList.png
 " height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <br>
 
                         <p>In this file, the SharedPreferences library is used for getting the current selected settings.</p>
 
@@ -142,6 +146,7 @@
 
                         <p>This refers to storing data in an external folder inside the phone, like the sd card. <br>
                         By the way it is implemented (shown below) there is no option for the user to save the picture on the phone, once is selected or confirmed after taking the picture, the app will upload it to the server.</p>
+                        <br>
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/CameraUsage.png
 " height="300" width="700" alt="Camera Usage">
 
@@ -151,11 +156,13 @@
                         <h3>Remote Storage</h3>
 
                         <p>Data is fetched and saved remotely using the web API. Recall the app is strongly related to the web app due to it relying on its service to save and get information. This API uses JSON serialized objects to communicate. As follows: </p>
+                        <br>
 
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/API-load.png
 " height="300" width="700" alt="API load data">
 
                         <p>As you can see, the loading process involves forming an url to fetch data from. It also sends the auth status to the remote service so it can check if the request is being made by an authorized client. Saving uses the same principle:</p>
+                        <br>
 
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/API-save.png
 " height="400" width="700" alt="API save data">
@@ -168,6 +175,23 @@
                         <p>To avoid needing to fetch multimedia files from the server, cahce is used to queep images locally in the app. With this in mind, they make an implementation of the of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> package in a file called &quot;cached_image.dart&quot; that returns a cached network image or a CircularProgressIndicator if it is not already cached:</p>
                         <br>
 
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Cached_image.png
+" height="200" width="500" alt="API save data">
+
+                        <br>
+
+                        <p>The fetching strategy used is pull-based. Only when the user asks for cached data is it
+downloaded and kept within the app. When the user first tries to load a filter a spinner is shown,
+and on airplane mode, a spinner is shown forever.</p>
+
+                        <br>
+                        <br>
+
+                        <h2>Patterns</h2>
+
+                        <br>
+
+                        <p>Taken by the CEO's web blog he explains how for Invoice Ninja they implemented a MVC combined with the popular Redux for state managing. The project is organized in this fashion as follows: </p>
 
 
                     </div>
