@@ -17,6 +17,23 @@
         <!--NavBar-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: center;
+              padding: 8px;
+            }
+
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+</style>
     </head>
     <body>
         <!--Nav Bar-->
@@ -265,6 +282,107 @@ and on airplane mode, a spinner is shown forever.</p>
                     <p>To support typical interactions in the app (ie, selecting a choice from a list) a SelectableEntity abstract class was created. The built_value classes then implement the class. This provide a way for each entity type to define how it should be presented and searched in a list, the subtitle of the ListTile is then used to show the matching field. This class is implemented by both types of data.</p>
 
                     <p>The editable entities implement the BaseEntity class which provides shared functionality such as archiving and deleting and handles filtering the list by their state (active, archived or deleted) and status (ie, draft, sent, paid, …).</p>
+                    <br>
+
+                    <h2>Libraries used</h2>
+
+                    <br>
+
+                    <table>
+                        <tr>
+                            <th>Library name</th>
+                            <th>Version</th>
+                        </tr>
+                        <tr>
+                            <td>flutter_redux</td>
+                            <td>^0.5.2</td>
+                        </tr>
+                        <tr>
+                            <td>redux_logging</td>
+                            <td>^0.3.0</td>
+                        </tr>
+                        <tr>
+                            <td>http</td>
+                            <td>^0.11.3+17</td>
+                        </tr>
+                        <tr>
+                            <td>in_app_purchase</td>
+                            <td>^0.2.1</td>
+                        </tr>
+                        <tr>
+                            <td>path_provider</td>
+                            <td>^0.5.0</td>
+                        </tr>
+                        <tr>
+                            <td>shared_preferences</td>
+                            <td>^0.4.2</td>
+                        </tr>
+                        <tr>
+                            <td>font_awesome_flutter</td>
+                            <td>^8.0.1</td>
+                        </tr>
+                        <tr>
+                            <td>built_value</td>
+                            <td>^6.1.2</td>
+                        </tr>
+                        <tr>
+                            <td>built_collection</td>
+                            <td>^4.0.0</td>
+                        </tr>
+                        <tr>
+                            <td>memoize</td>
+                            <td>^2.0.0</td>
+                        </tr>
+                        <tr>
+                            <td>url_launcher</td>
+                            <td>^3.0.3</td>
+                        </tr>
+                        <tr>
+                            <td>cached_network_image</td>
+                            <td>^0.8.0</td>
+                        </tr>
+                        <tr>
+                            <td>share</td>
+                            <td>^0.5.3</td>
+                        </tr>
+                        <tr>
+                            <td>intl</td>
+                            <td>^0.15.7</td>
+                        </tr>
+                        <tr>
+                            <td>flutter_slidable</td>
+                            <td>^0.4.6</td>
+                        </tr>
+                        <tr>
+                            <td>charts_flutter</td>
+                            <td>^0.6.0</td>
+                        </tr>
+                        <tr>
+                            <td>google_sign_in</td>
+                            <td>^4.0.4</td>
+                        </tr>
+                        <tr>
+                            <td>firebase_auth</td>
+                            <td>^0.11.1+11</td>
+                        </tr>
+                        <tr>
+                            <td>local_auth</td>
+                            <td>^0.3.0</td>
+                        </tr>
+                        <tr>
+                            <td>sentry</td>
+                            <td>^2.2.0</td>
+                        </tr>
+                        <tr>
+                            <td>image_picker</td>
+                            <td>^0.6.0+17</td>
+                        </tr>
+                        <tr>
+                            <td>flutter_pdfview</td>
+                            <td>^1.0.0+8</td>
+                        </tr>
+                    </table>
+
 
                     </div>
                 </div>
