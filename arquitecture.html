@@ -140,8 +140,17 @@
 
                         <h3>External-Public</h3>
 
-                        <p>This refers to storing data in an external folder inside the phone, like the sd card. This app does not use this storage strategy in implementation but makes use of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> library to create the cache and keep the images in the app.</p>
+                        <p>This refers to storing data in an external folder inside the phone, like the sd card. <br>
+                        By the way it is implemented (shown below) there is no option for the user to save the picture on the phone, once is selected or confirmed after taking the picture, the app will upload it to the server.</p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/CameraUsage.png
+" height="300" width="700" alt="Camera Usage">
 
+                        <br>
+                        <br>
+
+                        <h3>Remote Storage</h3>
+
+                        <p>Data is fetched and saved remotely using the web API. Recall the app is strongly related to the web app due to it relying on its service to save and get information. This API uses JSON serialized objects to communicate. As follows: </p>
 
                     </div>
                 </div>
