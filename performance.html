@@ -59,7 +59,12 @@
                     <div class="w-100 divider"></div>
                     <div class="col">
 
-                        <p>For the performance analysis of the app we took every feature of the app and gave it heavy use for a period of time to see how it responded on the phone. To achieve this, we used the android studio profiler on the android-side part of the app. This gave us a tool to see a graphic representation of how the app was performing on different aspects as CPU usage, memory usage, network usage and energy. After running these tests, we found that every feature behaved similarly. The reason for this at the conclusions section.</p>
+                        <h2>Dynamic Profiling</h2>
+
+                        <br>
+                        <br>
+
+                        <p>For the dynamic analysis of the app we took every feature of the app and gave it heavy use for a period of time to see how it responded on the phone. To achieve this, we used the android studio profiler on the android-side part of the app. This gave us a tool to see a graphic representation of how the app was performing on different aspects as CPU usage, memory usage, network usage and energy. After running these tests, we found that every feature behaved similarly. The reason for this at the conclusions section.</p>
                         <br>
 
 
@@ -556,6 +561,26 @@ Another noteworthy point in the graphs is that even though there are peaks on th
 
                         <br>
                         <br>
+
+                        <h2>Static Profiling</h2>
+                        <br>
+                        <br>
+
+                        <p>The static profiling tool used was the dart analyzer that comes with the flutter plugin for android studio. We found out that this analyzer is very customizable but also strict out of the box. <br>
+We were surprised to find out that running this static analyzer found no code errors on the Invoice Ninja project. This probably has to do with the fact that Hillel Coren, CEO and main developer of the flutter app is actually a GDE (google developer expert) for flutter. We were still hesitant whether to trust this analyzer, so we tested it on our own project (transport app) and got a bittersweet feeling finding out that there was almost 70 warnings and bugs. <br> In conclusion, the Invoice Ninja project doesn’t have even a single error or warning. </p>
+
+                        <br>
+                        <br>
+
+                        <h2>Multithreading</h2>
+                        <br>
+                        <br>
+
+                        <p>Dart executes one operation at a time, one after the other meaning that as long as one operation is executing, it cannot be interrupted by any other Dart code. In other words, Dart in which flutter is based, is a single threaded language. </p>
+                        <br>
+                        <p>One might think that the usage of an object called Future or the async statement on a method is a way of parallel processing, but it actually is not. There is a single internal and invisible process called the &quot;Event Loop&quot; (that has an event queue to keep track of the code to be executed) in which a Future or async method interacts by pushing code into the event queue. There is many usages of both the Future and async methods in the project but these are not different threads (&quot;Isolate&quot; in flutter lingo) running.</p>
+                        <br>
+                        <p>Instead, an Isolate is the implementation of the notion of Thread but there is a major difference, Isolates do not share memory between them. <strong>Invoice Ninja does not make use of this type of multithreading technique</strong>. </p>
 
                     </div>
                 </div>
