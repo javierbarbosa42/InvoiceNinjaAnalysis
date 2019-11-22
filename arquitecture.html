@@ -152,6 +152,24 @@
 
                         <p>Data is fetched and saved remotely using the web API. Recall the app is strongly related to the web app due to it relying on its service to save and get information. This API uses JSON serialized objects to communicate. As follows: </p>
 
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/API-load.png
+" height="300" width="700" alt="API load data">
+
+                        <p>As you can see, the loading process involves forming an url to fetch data from. It also sends the auth status to the remote service so it can check if the request is being made by an authorized client. Saving uses the same principle:</p>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/API-save.png
+" height="400" width="700" alt="API save data">
+
+                        <br>
+                        <br>
+
+                        <h3>Cache and data fetching strategies</h3>
+
+                        <p>To avoid needing to fetch multimedia files from the server, cahce is used to queep images locally in the app. With this in mind, they make an implementation of the of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> package in a file called &quot;cached_image.dart&quot; that returns a cached network image or a CircularProgressIndicator if it is not already cached:</p>
+                        <br>
+
+
+
                     </div>
                 </div>
             </div>
