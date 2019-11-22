@@ -252,7 +252,19 @@ and on airplane mode, a spinner is shown forever.</p>
 
                     <p>Their solution to persistence is to split up the core parts of the store (data, UI and auth) to persist each part separately. As a user makes changes to a new record they constantly persist the UI store without needing to persist the data store which could potentially have tens of thousands or records.</p>
 
-                    <p>If a user starts to create a new record and then quits the app they present the partially completed record when the app is relaunched. This is handled in the code by having any action which requires persistence (such as when data is loaded or modified) implement the PersistData or PersistUI abstract classes.</p>
+                    <p>If a user starts to create a new record and then quits the app they present the partially completed record when the app is relaunched. This is handled in the code by having any action which requires persistence (such as when data is loaded or modified) implement the PersistData or PersistUI abstract classes. The usage of Persist UI is as follows:</p>
+
+                    <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/PersistUI.png
+" height="200" width="400" alt="API save data">
+                    <br>
+
+                    <h4>Abstract clases</h4>
+
+                    <p>We have two types of data in the app: editable entities which the user can create and edit (such as clients and invoices) and static data which can be referenced but not changed (such as the list of languages or currencies).</p>
+
+                    <p>To support typical interactions in the app (ie, selecting a choice from a list) a SelectableEntity abstract class was created. The built_value classes then implement the class. This provide a way for each entity type to define how it should be presented and searched in a list, the subtitle of the ListTile is then used to show the matching field. This class is implemented by both types of data.</p>
+
+                    <p>The editable entities implement the BaseEntity class which provides shared functionality such as archiving and deleting and handles filtering the list by their state (active, archived or deleted) and status (ie, draft, sent, paid, …).</p>
 
                     </div>
                 </div>
