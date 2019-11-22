@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
         <!--NavBar-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
     </head>
     <body>
         <!--Nav Bar-->
@@ -205,6 +206,53 @@ and on airplane mode, a spinner is shown forever.</p>
 " height="500" width="600" alt="API save data">
 
                         <p>Where the middleware and reducer function as the controller, the store is used as the model and view keeps the same.</p>
+                        <br>
+                        <p>The API shown in the above figure is actually how the app makes calls to the backend. We actually had to implement the backend by hand in order to have the full features of the mobile app the webapp implemented by us can be found at <a href="http://davidnino.social/login">Invoice Ninja self-hosted</a>. The mentioned backend looks as follows:</p>
+                        <br>
+
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/3tierLevel.png
+" height="200" width="600" alt="API save data">
+
+                        <br>
+
+                        <p>We now are going to take a look at the strategies used by the developers to work more efficiently and optimize performance</p>
+
+                        <br>
+
+                        <h4>Creating widgets</h4>
+
+                        <p>Kept a DRY code (don’t repeat yourself). Refactoring widgets is just like refactoring standard code, they took patterns of duplicate code and refactored it out to a widget. As a result, widgets can be incredibly small but used throughout the app they both reduce code and make it easier to apply changes later on.</p>
+
+                        <br>
+
+                        <h4>View models</h4>
+
+                        <p>One of the core principles of software architecture is SRP (Single Responsibility Principle). As the views got more complicated a great way they implemented separation of concerns was to create a view model which backs the view.</p>
+
+                        <p>This enabled the view to focus on the layout of the UI while the view models managed the view logic. For example, the view model would handle preparing data from the central store to the format needed by the view and provide methods to dispatch actions to update the store.</p>
+
+                    <h4>Completers</h4>
+
+                    <p>In the app it’s common for the user to trigger an action in the UI which depends on completing a successful request on the server. For example, saving a new record.</p>
+
+                    <p>A common approach in this scenario is to pass the context in the action and have the middleware use the context, however they used completers which provide much cleaner code in the UI layer.</p>
+
+                    <h4>Enums</h4>
+
+                    <p>Invoice Ninja has many modules, for example: clients, products, invoices, tasks, expenses, … They all provide similar functionality (list, view, edit, archive, delete, restore) and then some provide other actions such as invoice or email.</p>
+
+                    <p>To support this they use built_value enums. In this case they have an EntityType enum and an EntityAction enum. A nice aspect of this solution is it’s automatically serialized/deserialized when the state is persisted.</p>
+
+                    <p>The custom widgets then can accept an EntityType parameter which can be used to configure itself from the store. They also added a lookup function in the AppLocalization class to help with translations.</p>
+
+                    <br>
+
+                    <h4>Persistence</h4>
+
+                    <p>Their solution to persistence is to split up the core parts of the store (data, UI and auth) to persist each part separately. As a user makes changes to a new record they constantly persist the UI store without needing to persist the data store which could potentially have tens of thousands or records.</p>
+
+                    <p>If a user starts to create a new record and then quits the app they present the partially completed record when the app is relaunched. This is handled in the code by having any action which requires persistence (such as when data is loaded or modified) implement the PersistData or PersistUI abstract classes.</p>
 
                     </div>
                 </div>
