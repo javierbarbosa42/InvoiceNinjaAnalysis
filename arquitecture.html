@@ -77,7 +77,71 @@
 
                         <h3>Shared preferences</h3>
 
-                        <p>There is in total 7 files in which the SharedPreferences library is used</p>
+                        <p>There are in total 7 files in which the SharedPreferences library is used</p>
+                        <p><strong>main.dart</strong></p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Main.png" height="150" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for setting up some configurations of the app as setting the dark mode on the app or requiring login</p>
+
+                        <br>
+
+                        <p><strong>auth_middleware.dart</strong></p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsAuth.png" height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for fetching or saving data on the login.</p>
+
+                        <br>
+
+                        <p><strong>app_middleware.dart</strong></p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsAppMiddle.png" height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for getting data on the state of the app.</p>
+
+                        <br>
+
+                        <p><strong>expense_edit_vm.dart</strong></p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsExpenseEdit.png" height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for getting selected preferences on whether to sen an email after registering an expense.</p>
+
+                        <br>
+
+                        <p><strong>payment_edit_vm.dart</strong></p>
+                        <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/ContentImages/SharedPrefsPayEdit.png
+" height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for getting selected preferences on whether to sen an email after registering a payment.</p>
+
+                        <br>
+
+                        <p><strong>persistence_repository.dart</strong></p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsPersistence.png
+" height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for getting the actual company state.</p>
+
+                        <br>
+
+                        <p><strong>settings_list_vm.dart</strong></p>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/SharedPrefsSettingsList.png
+" height="300" width="700" alt="SharedPreferences in Main file.">
+
+                        <p>In this file, the SharedPreferences library is used for getting the current selected settings.</p>
+
+                        <br>
+                        <br>
+
+                        <h3>Local-Private</h3>
+
+                        <p>This refers to storing data in SQLite. This app does not use this storage strategy in implementation but makes use of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> library to create the cache and keep the images in the app.</p>
+
+                        <br>
+                        <br>
+
+                        <h3>External-Public</h3>
+
+                        <p>This refers to storing data in an external folder inside the phone, like the sd card. This app does not use this storage strategy in implementation but makes use of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> library to create the cache and keep the images in the app.</p>
+
 
                     </div>
                 </div>
