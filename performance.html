@@ -106,7 +106,7 @@
                         <br>
                         <br>
 
-                        <p>There is a positive correlation between the network usage and the energy peaks on the above graph. Although there is peaks in the energy consumption, this consumption is always categorized as light. </p>
+                        <p>There is a positive correlation between the network usage and the energy peaks on the above graph. Although there are peaks in the energy consumption, this consumption is always categorized as light. </p>
 
                         <br>
                         <br>
@@ -154,7 +154,7 @@
                         <p>The energy profiling of this feature shows how the energy use is low for this feature. </p>
                         <br>
 
-                        <p> As shown above different features behave the same way one from other. The CPU, memory, network and energy usages are represented in a similar fashion by the graphics. For the next features, the overview and speciphics is going to be showed:  </p>
+                        <p> As shown above different features behave the same way one from other. The CPU, memory, network and energy usages are represented in a similar fashion by the graphics. For the next features, the overview and specifics is going to be showed:  </p>
 
                         <br>
                         <br>
@@ -210,9 +210,13 @@
                         <br>
                         <br>
 
-                        <p>This feature shows peak of use at the end of the profiling. This is due to use of the camera to take and upload pictures of the invoices sent or to be sent.</p>
+                        <p>This feature shows peak of use at the end of the profiling. This is due to use of the camera to take and upload pictures of the invoices sent or to be sent. The piece of code that does the trick is the following:</p>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/CameraUsage.png" height="150" alt="Invoices CPU usage"></a> <br>
 
                         <br>
+
+                        <p>We will now see how the usage of the camera impacts the different aspects of the profiling.</p>
 
                         <h4>CPU</h4>
                         <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_CPU.png" height="300" width="700" alt="Invoices CPU usage"></a> <br>
@@ -240,13 +244,13 @@
                         <br>
                         <br>
 
-                        <p></p>
+                        <p> Once the picture was taken, the app starts uploading it to the server. This process causes a peak on the network usage. </p>
 
                         <br>
 
                         <h4>Energy</h4>
                         <img src="https://raw.githubusercontent.com/javierbarbosa42/InvoiceNinjaAnalysis/master/Images/Invoice/Invoice_Energy.png" height="300" width="700" alt="Invoices energy usage"></a> <br>               <br>
-                        <p></p>
+                        <p>As mentioned before, there is a positive correlation on the network usage and the battery expenditure. The more network is used, the more battery is consumed.</p>
 
                         <br>
                         <br>
@@ -256,7 +260,7 @@
                         <br>
                         <br>
 
-                        <p> </p>
+                        <p>The payment feature was tested creating, saving, editing and reloading the payment sections several times.  This is the reason why there is some peaks at the network section. But besides this continuous reloading, there was not peaks on the energy usage. The reason why this happens is that fetching data wirelessly is less energy consumptive than uploading data (Kalic, G. 2012. &quot;Energy consumption in Android phones when using Wireless communication technologies&quot;). </p>
 
                         <br>
 
@@ -306,7 +310,7 @@
                         <br>
                         <br>
 
-                        <p> </p>
+                        <p>The quotes feature also lets its users upload documents and pictures in the process of generating a quote. This test was made creating, editing, listing, filtering and uploading quotes. Generating a quote included uploading a picture or document. As in the invoice feature, the quote feature shows a higher usage of memory, network and energy because of the process of uploading the picture. Although there is a higher usage of resources, this usage keeps being categorized as light to medium.</p>
 
                         <br>
 
@@ -356,7 +360,7 @@
                         <br>
                         <br>
 
-                        <p> </p>
+                        <p>For the projects features profiling, we created new projects and edited existing ones. We also added tasks and clients to existing projects making new associations. To make this test more demanding, we reloaded the data several times which reflects on the network graph. The first time of reload we made changes on the web app before entering the app so the peak on the network is due to this fact. The other components of the profiler behave as expected. </p>
 
                         <br>
 
@@ -406,7 +410,9 @@
                         <br>
                         <br>
 
-                        <p> </p>
+                        <p>The tasks feature lets its users on top of creating new tasks, edit them and assign them to projects and clients, it also lets calculate the price by recording the time taken to finish the task. Time recording feature uploads the starting and stopping times to the server, therefore in the network graph there is several peaks. Notice how the number of peaks is even, representing a starting and stopping point.
+Another noteworthy point in the graphs is that even though there are peaks on the network usage, these peaks does not represent a high or heavy usage of network (just up to 5KB/s). This is the reason why it does not impact on the battery usage.
+.</p>
 
                         <br>
 
@@ -456,7 +462,7 @@
                         <br>
                         <br>
 
-                        <p> </p>
+                        <p>For the vendors feature we also created, edited and saved several vendors. To create and save a vendor there are many input points that are distributed on different views. As we will discuss on the architecture section, Invoice Ninja developers adopted a pattern that saved each user change on the form, so the user didn’t lose the information if he switched between apps. This is denoted in the memory graph, where the memory consumed keeps growing until the user saves the form.  There are also some peaks on the network graph that display each time some modification of the vendor form is saved. </p>
 
                         <br>
 
@@ -506,7 +512,7 @@
                         <br>
                         <br>
 
-                        <p> </p>
+                        <p>For the expenses feature, there were also several tests made. Listing, creating, modifying and saving different expenses. For this feature there is also an option to upload a picture or document once the expense is created, therefore a raise on the CPU, memory, network and energy usage. </p>
 
                         <br>
 
