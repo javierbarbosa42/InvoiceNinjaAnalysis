@@ -18,6 +18,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <style>
+            h2{
+                font-size : 50px;
+                color: black;
+            }
             table {
               font-family: arial, sans-serif;
               border-collapse: collapse;
@@ -79,7 +83,7 @@
                     <div class="w-100 divider"></div>
                     <div class="col">
 
-                        <h2>Storage and data handling</h2>
+                        <h2 style="font-size : 50px; color: black">Storage and data handling</h2>
 
                         <br>
                         <br>
@@ -192,7 +196,7 @@
 
                         <h3>Cache and data fetching strategies</h3>
 
-                        <p>To avoid needing to fetch multimedia files from the server, cahce is used to queep images locally in the app. With this in mind, they make an implementation of the of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> package in a file called &quot;cached_image.dart&quot; that returns a cached network image or a CircularProgressIndicator if it is not already cached:</p>
+                        <p>To avoid needing to fetch multimedia files from the server, cahce is used to keep images locally in the app. With this in mind, they make an implementation of the of the <a href="https://pub.dev/packages/cached_network_image">cached_network_image</a> package in a file called &quot;cached_image.dart&quot; that returns a cached network image or a CircularProgressIndicator if it is not already cached:</p>
                         <br>
 
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Cached_image.png
@@ -218,7 +222,7 @@ and on airplane mode, a spinner is shown forever.</p>
                         <p>Taken by the CEO's web blog he explains how for Invoice Ninja they implemented a MVC combined with the popular Redux for state managing. The project is organized in this fashion as follows: </p>
 
 <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/ProjectStructure.png
-" height="500" width="500" alt="API save data">
+" width="500" alt="API save data">
 
                         <p>Where data directory contains the Model, ui directory contains the view and redux directory contains the controller/domain.</p>
                         <br>
@@ -247,6 +251,41 @@ and on airplane mode, a spinner is shown forever.</p>
 
                         <br>
 
+                        <h4>Repository</h4>
+                        <br>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Repository.png
+" width="600" alt="Repo style">
+                        <br>
+                        <p>Its used to handle data query and save data. This is implemented for the entities in each feature.</p>
+                        <br>
+
+                        <h4>Builder</h4>
+                        <br>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Builder.png
+" width="600" alt="Repo style">
+                        <br>
+                        <p>Builder pattern is used to make a flexible build of different entities. The picture represents the creation of the dashboard which is a feature. This pattern is also used to build the state of the objects.</p>
+                        <br>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Builder2.png
+" width="600" alt="Repo style">
+                        <br>
+                        <br>
+                        <h4>Interceptor</h4>
+                        <br>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Middleware.png
+" width="600" alt="Repo style">
+                        <br>
+                        <p>The interceptor is the middleware of our project. It centralizes the different interactions there can be done with an entity. The goal is to make the code maintainable.</p>
+                        <br>
+                        <br>
+                        <h4>Singleton and factory</h4>
+                        <br>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Singleton.png
+" width="600" alt="Repo style">
+                        <br>
+                        <p>Singleton is used for creating and using one and only one state for the entities in each feature. The image above shows how the state for the Quote is created. If there is already an existing Quote state, it is returned. Otherwise, it creates the new state.</p>
+                        <br>
+
                         <h3>Strategies</h3>
 
                         <br>
@@ -255,33 +294,27 @@ and on airplane mode, a spinner is shown forever.</p>
 
                         <br>
 
-                        <h4>Creating widgets</h4>
+                        <h4>No replicated code</h4>
 
                         <p></p>
 
-                        <p>Kept a DRY code (don’t repeat yourself). Refactoring widgets is just like refactoring standard code, they took patterns of duplicate code and refactored it out to a widget. As a result, widgets can be incredibly small but used throughout the app they both reduce code and make it easier to apply changes later on.</p>
+                        <p>Patterns of duplicate code were converted out to a widget. As a result, widgets can be incredibly small but used throughout the app they both reduce code and make it easier to apply changes later on.</p>
 
                         <br>
 
                         <h4>View models</h4>
 
-                        <p>One of the core principles of software architecture is SRP (Single Responsibility Principle). As the views got more complicated a great way they implemented separation of concerns was to create a view model which backs the view.</p>
-
-                        <p>This enabled the view to focus on the layout of the UI while the view models managed the view logic. For example, the view model would handle preparing data from the central store to the format needed by the view and provide methods to dispatch actions to update the store.</p>
+                        <p>Separation of the UI from view logic. For example, the view model would handle preparing data from the central store to the format needed by the view and provide methods to dispatch actions to update the store.</p>
 
                     <h4>Completers</h4>
 
-                    <p>In the app it’s common for the user to trigger an action in the UI which depends on completing a successful request on the server. For example, saving a new record.</p>
-
-                    <p>A common approach in this scenario is to pass the context in the action and have the middleware use the context, however they used completers which provide much cleaner code in the UI layer.</p>
+                    <p>They pass the context in in which an action was trigered and the middleware uses the contextr.</p>
 
                     <h4>Enums</h4>
 
                     <p>Invoice Ninja has many modules, for example: clients, products, invoices, tasks, expenses, … They all provide similar functionality (list, view, edit, archive, delete, restore) and then some provide other actions such as invoice or email.</p>
 
-                    <p>To support this they use built_value enums. In this case they have an EntityType enum and an EntityAction enum. A nice aspect of this solution is it’s automatically serialized/deserialized when the state is persisted.</p>
-
-                    <p>The custom widgets then can accept an EntityType parameter which can be used to configure itself from the store. They also added a lookup function in the AppLocalization class to help with translations.</p>
+                    <p>To support this they built enums. In this case they have an EntityType enum and an EntityAction enum.</p>
 
                     <br>
 
@@ -299,7 +332,7 @@ and on airplane mode, a spinner is shown forever.</p>
 
                     <p>We have two types of data in the app: editable entities which the user can create and edit (such as clients and invoices) and static data which can be referenced but not changed (such as the list of languages or currencies).</p>
 
-                    <p>To support typical interactions in the app (ie, selecting a choice from a list) a SelectableEntity abstract class was created. The built_value classes then implement the class. This provide a way for each entity type to define how it should be presented and searched in a list, the subtitle of the ListTile is then used to show the matching field. This class is implemented by both types of data.</p>
+                    <p>To support typical interactions in the app a SelectableEntity abstract class was created. The built_value classes then implement the class. This provide a way for each entity type to define how it should be presented and searched in a list, the subtitle of the ListTile is then used to show the matching field. This class is implemented by both types of data.</p>
 
                     <p>The editable entities implement the BaseEntity class which provides shared functionality such as archiving and deleting and handles filtering the list by their state (active, archived or deleted) and status (ie, draft, sent, paid, …).</p>
                     <br>
