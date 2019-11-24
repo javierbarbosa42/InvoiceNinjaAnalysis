@@ -121,7 +121,7 @@
                         <br>
                         <br>
 
-                        <p>For the clients overview the above graph shows a similar behavior as the dashboard feature. Low use of network and energy outstand in this overview. Similar usage of memory and very low usage of CPU except for the launching of the app (beginning). It important to note how in the activity representation of the app (green line below the interactions in red dots), due to one of the features of the app that let send emails to their clients, at the moment of tapping that option, the app opens up the default emailing app of the phone so Invoice Ninja is put to sleep. </p>
+                        <p>For the clients overview the above graph shows a similar behavior as the dashboard feature. Low use of network and energy outstand in this overview. Similar usage of memory and very low usage of CPU except for the launching of the app (beginning). It important to note how in the activity representation of the app (green line below the interactions in red dots), due to one of the features of the app that let send emails to their clients, at the moment of tapping that option, the app opens up the default emailing app of the phone so Invoice Ninja is put to sleep.  </p>
 
                         <br>
 
@@ -140,7 +140,7 @@
                         <br>
                         <br>
 
-                        <p>Bear in mind that there is a gap at the start of the trace that is recording memory usage outside the app. Once again, the biggest use of memory is by native libraries, followed by code and graphics. There is another category that sums the rest of usages of memory called “Others” that is also important.</p>
+                        <p>Bear in mind that there is a gap at the start of the trace that is recording memory usage outside the app. Once again, the biggest use of memory is by native libraries, followed by code and graphics. There is another category that sums the rest of usages of memory called “Others” that is also important. We see how there is a slight but continious increase on the use of the memory even after the garbage collector disposes the unused references that might show that there is a memory leak.</p>
 
                         <br>
 
@@ -239,7 +239,7 @@
                         <br>
                         <br>
 
-                        <p>Memory is one of the performance aspects that evidently is used more when taking a picture. Opening and taking the picture so it can be sent afterwards requires the use of the cache to point at the image that is going to be uploaded.</p>
+                        <p>Memory is one of the performance aspects that evidently is used more when taking a picture. Opening and taking the picture so it can be sent afterwards requires the use of the cache to point at the image that is going to be uploaded. It is normal for the memory to rise a bit once the image is taken, but with our tests we found out that the images that we uploaded are in average 5MB of size but the rise on memory shown in the profiling is more than 5MB, which we can conclude to be a memory leak. Reading in depth about memory leaks in flutter, we see there is issues on the flutter github repo regarding memory leaks, there is many reasons why this could be happening, but there is a probable cause; the state it's not being disposed properly after alterning from apps.</p>
 
                         <br>
 
@@ -334,7 +334,7 @@
                         <br>
                         <br>
 
-                        <p></p>
+                        <p>In this feature we also find a memory leak. The as with the invoices feature, we see there the camera use causes this problem probably because of the state. The desicion from the developers to save parts of the state separately and then piece it back together when initializing the state on load might be impacting this memory usage for the camera library.</p>
 
                         <br>
 
@@ -535,7 +535,7 @@
                         <br>
                         <br>
 
-                        <p></p>
+                        <p>We see a major memory leak in this feature. After the garbage collector is used, the memory peaks and mantains its higher use. A possible sotution to this problem would be the use of an external library called <a href="https://pub.dev/packages/kisrs">Kisrs</a> that, as well as Redux, manages the state but also lets its users dispose this state implementing a method "dispose".</p>
 
                         <br>
 
@@ -569,6 +569,11 @@
 
                         <br>
                         <br>
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/DartAnalysis.png" height="600" width="700" alt="Expenses energy usage">
+
+
+                        <br>
+                        <br>
 
                         <h2 style="color: #322f2f">Multithreading</h2>
                         <br>
@@ -578,6 +583,12 @@
                         <br>
                         <p>One might think that the usage of an object called Future or the async statement on a method is a way of parallel processing, but it actually is not. There is a single internal and invisible process called the &quot;Event Loop&quot; (that has an event queue to keep track of the code to be executed) in which a Future or async method interacts by pushing code into the event queue. There is many usages of both the Future and async methods in the project but these are not different threads (&quot;Isolate&quot; in flutter lingo) running.</p>
                         <br>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/Threads.png" height="300" width="700" alt="Expenses energy usage">
+                        <p>(lib\data\repositories\client_repository.dart)</p>
+
+                        <br>
+
                         <p>Instead, an Isolate is the implementation of the notion of Thread but there is a major difference, Isolates do not share memory between them. <strong>Invoice Ninja does not make use of this type of multithreading technique</strong>. </p>
 
                     </div>

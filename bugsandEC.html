@@ -7,7 +7,7 @@
         <!--Icons-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">  
+        <link rel="stylesheet" type="text/css" href="CSS/catalogueStyle.css">
         <link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
         <link rel="stylesheet" type="text/css" href="CSS/navBarStyle.css">
         <!--Fonts-->
@@ -91,6 +91,63 @@
                         <hr>
                         <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/blob/master/Videos/gif13.gif?raw=true">
                         <p>Lastly, we see yet another example of <strong>stuck progress notification</strong> finalizing with <strong>nonexistent notification of progress while downloadng content</strong>.</p>
+
+                        <h2>Bugs</h2>
+
+                        <p>In this section we are going to cover issues related to bugs of the app.</p>
+
+                        <br>
+
+                        <h4>Bug 1: Loader not loading in the center</h4>
+
+                        <br>
+
+                        <img src="https://user-images.githubusercontent.com/1937433/67687925-0c2f3180-f9bf-11e9-974d-1b45d51d82e1.png" height="500" width="300" alt="SharedPreferences in Main file.">
+                        <br>
+                        <br>
+
+                        <p>As shown on the previous image, the screen loader is not centered when shown. The code that runs the previous view is: </p>
+
+                        <br>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/LoadingIndicator.png" height="150" width="500" alt="SharedPreferences in Main file.">
+
+                        <br>
+                        <br>
+                        <p>Using an Expanded widget makes a child of a Row, Column, or Flex expand to fill the available space along the main axis (e.g., horizontally for a Row or vertically for a Column). If multiple children are expanded, the available space is divided among them according to the flex factor. This bug might have to do with another empty widget being rendered besides the screen loader.</p>
+                        <br>
+                        <br>
+
+                        <h4>Bug 2: Close app since view or download Invoice PDF</h4>
+
+                        <br>
+
+                        <p>This bug is impeding the app to keep running when the PDF viewer is opened. It seems the developers worked around this problem by disabling the PDF files on the app. This is shown in the following images: </p>
+
+                        <br>
+                        <br>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/InvoicePDF.png" height="400" width="500" alt="SharedPreferences in Main file.">
+                        <br>
+                        <br>
+
+                        <p>In the above image we show how there is a PDF file uploaded to the invoice number 004. But when we check the app there is no PDF file available for preview:</p>
+
+                        <br>
+                        <br>
+
+                        <img src="https://github.com/javierbarbosa42/InvoiceNinjaAnalysis/raw/master/Images/ContentImages/InvoiceWoPDF.png" height="500" width="500" alt="SharedPreferences in Main file.">
+
+                        <br>
+                        <br>
+
+                        <h4>Bug 3: Forms are not checking input data</h4>
+
+                        <br>
+
+                        <p>There is many ways an user can enter its iputs to the form, but there is a couple of things that could be checked before submitting a form. For instance checking if a entered email has an @ on it.</p>
+
+                        <br>
                     </div>
                 </div>
             </div>
